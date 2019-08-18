@@ -3,15 +3,15 @@
 .idea
 node_modules/
 *.sh
-*.bat
-*.json
+#*.bat
+#*.json
 *.lock
 
 ### config ###
-config/
+#config/
 
 ### utils ###
-utils/
+#utils/
 
 ### html ###
 docs/.vuepress
