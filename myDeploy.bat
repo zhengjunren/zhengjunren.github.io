@@ -16,4 +16,3 @@ call git push
 
 f:
 
-cd 哈哈哈\myblog
