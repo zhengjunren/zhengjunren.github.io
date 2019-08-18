@@ -1,4 +1,4 @@
-# java基础
+# Java基础
 
 ## java 介绍
 
