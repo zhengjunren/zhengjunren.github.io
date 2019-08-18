@@ -13,7 +13,11 @@ module.exports = {
     '/markdown/': markdown,
     '/changelog/': changelog,
     '/': [
-        '',
-        '/guide/',
+        {
+            title:'首页',
+            path:'/',
+            collapsable:false
+        },
+        '/guide/'
     ]
 };

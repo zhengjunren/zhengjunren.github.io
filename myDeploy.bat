@@ -16,3 +16,8 @@ call git push
 
 f:
 
+cd ..
+
+cd ..
+
+cd ..
