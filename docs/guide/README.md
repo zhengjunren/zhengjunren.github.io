@@ -13,7 +13,7 @@
 
 ## 代码托管
 
-代码会放在[**GitHub**]((https://github.com/zhengjunren/))和[**码云**](https://gitee.com/zhengjunren/)上！
+代码会放在[**GitHub**](https://github.com/zhengjunren/)和[**码云**](https://gitee.com/zhengjunren/)上！
 
 ## 版权与声明
 
