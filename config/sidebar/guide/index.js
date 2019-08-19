@@ -1,9 +1,10 @@
 const sidebarUtils = require('../../../utils/sidebarUtils');
 
-const titles = ['指南', '工具'];
+const titles = ['指南', '编程','工具'];
 
 const childrenData = [
-    ['', 'java基础','javaweb',],
+    [''],
+    ['java基础','javaweb'],
     ['vuepress','markdown']
 ];
 

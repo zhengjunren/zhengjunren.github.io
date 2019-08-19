@@ -9,18 +9,16 @@
 ## 分类
 
 目前分为```Java基础```、```JavaWeb```和一些工具的使用，现在博客还不完整，
-以后有时间会慢慢补充，并且还想添加一些微服务的概念和```helloworld```工程
+以后有时间会慢慢补充，并且还想添加一些微服务的概念和```helloworld```工程。
 
-## GitHub
+## 代码托管
 
-代码会放在GitHub上！
-
-[我的GitHub](https://github.com/zhengjunren/)
+代码会放在[**GitHub**]((https://github.com/zhengjunren/))和[**码云**](https://gitee.com/zhengjunren/)上！
 
 ## 版权与声明
 
-大部分文档都由自己完成，有转载的文章已经附上原文出处链接和声明
+大部分文档都由自己完成，有转载的文章已经附上原文出处链接和声明。
 
 由本人完成的文档未经授权禁止转载！！！
 
-Copyright (c) 2019-present, Junren Zheng
+***Copyright (c) 2019-present, Junren Zheng***

@@ -15,7 +15,7 @@ Maven 是一个项目管理和综合工具。Maven 提供了开发人员构建�
 
 [**了解一下**](/mvc)
 
-## spring
+## Spring
 
 Spring 是于 2003 年兴起的一个轻量级的 Java 开发框架，它是为了解决企业应用开发的复杂性而创建的。Spring 的核心是控制反转（IoC）和面向切面编程（AOP）。简单来说，Spring 是一个分层的 Java SE/EE full-stack(一站式)轻量级开源框架。
 

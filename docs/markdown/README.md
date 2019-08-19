@@ -11,3 +11,9 @@ Markdown的语法简洁明了、学习容易，而且功能比纯文本更强，
 [Typora](https://typora.io/)是一款轻便简洁的Markdown编辑器，支持即时渲染技术，这也是与其他Markdown编辑器最显著的区别。即时渲染使得你写Markdown就想是写Word文档一样流畅自如，不像其他编辑器的有编辑栏和显示栏。
 支持导出HTML、PDF、Word、图片等多种类型文件。
 
+
+## 文章转载
+
+:::tip 声明
+下面的markdown语法篇从[菜鸟教程](https://www.runoob.com/markdown/md-tutorial.html)转载
+:::
