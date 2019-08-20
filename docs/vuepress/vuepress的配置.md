@@ -54,7 +54,7 @@ sidebar: {
 }
 ```
 效果如下
-![vuepress使用3](/vuepress/vuepress使用3.png)
+![vuepress使用3](/vuepress/vuepress使用3.PNG)
 
 ## 插件
 
