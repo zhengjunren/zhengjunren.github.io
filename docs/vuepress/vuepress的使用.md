@@ -1,17 +1,17 @@
 ﻿# vuepress的使用
 
 ::: tip 备注
-个人使用习惯，参照官网的[默认主题配置](https://vuepress.vuejs.org/zh/default-theme-config/)
+个人使用习惯，参照官网的[默认主题配置](https://vuepress.vuejs.org/zh/default-theme-config/)。
 :::
 
 ## 初始化
 
-打开cmd命令台，进入F:/test目录下，运行下面的代码
+打开cmd命令台，进入F:/test目录下，运行下面的代码。
 ```sh
 yarn init
 yarn add -D vuepress
 ```
-+ ```yarn init```后需要确认一些选项，可点击回车
++ ```yarn init```后需要确认一些选项，可点击回车。
 
 ## 目录结构
 
@@ -30,10 +30,10 @@ yarn add -D vuepress
 └── package.json
 ```
 
-+ ```docs```目录下的```README.md```文件为网站首页
-+ ```public```文件夹作用为静态资源文件的存放
-+ ```config.js```是配置文件
-+ ```guide```文件夹是放置指南页的位置
++ ```docs```目录下的```README.md```文件为网站首页。
++ ```public```文件夹作用为静态资源文件的存放。
++ ```config.js```是配置文件。
++ ```guide```文件夹是放置指南页的位置。
 
 ## 首页
 
@@ -60,14 +60,14 @@ footer: MIT Licensed | Copyright © 2018-present Evan You
 ```
 
 ## 指南页
-+ 即```guide```目录下的```README.md```文件中输入如下
++ 即```guide```目录下的```README.md```文件中输入如下：
 ```
 # 指南
 
 ## 这是指南页
 ```
 
-+ 在package.json加入如下脚本
++ 在package.json加入如下脚本：
 
 ```json
 {
@@ -97,15 +97,15 @@ footer: MIT Licensed | Copyright © 2018-present Evan You
 }
 ```
 
-+ 在cmd命令台中运行
++ 在cmd命令台中运行：
 ```sh
 yarn docs:dev
 ```
 
-在浏览器中输入```http://localhost:8080```, 结果如下
+在浏览器中输入```http://localhost:8080```, 结果如下：
 
 ![vuepress使用1](/vuepress/vuepress使用1.png)
 
 :::tip 提示
-图片没有显示出来的原因是在```public```文件夹中没有```hero.png```图片
+图片没有显示出来的原因是在```public```文件夹中没有```hero.png```图片。
 :::

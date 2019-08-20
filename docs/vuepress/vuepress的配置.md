@@ -1,12 +1,12 @@
 # vuepress配置
 
 ::: tip 备注
-个人使用习惯，参照官网的[默认主题配置](https://v1.vuepress.vuejs.org/zh/theme/default-theme-config.html)
+个人使用习惯，参照官网的[默认主题配置](https://v1.vuepress.vuejs.org/zh/theme/default-theme-config.html)。
 :::
 
 ## 导航栏
 
-在```.vuepress```目录下创建```config.js```文件
+在```.vuepress```目录下创建```config.js```文件：
 ```js
 module.exports = {
     title: '郑俊仁',
@@ -58,7 +58,7 @@ sidebar: {
 
 ## 插件
 
-+ 演示```back-to-top```插件（即回到顶部）
++ 演示```back-to-top```插件（即回到顶部）：
 
 ### 安装
 ```sh
@@ -82,7 +82,7 @@ module.exports = {
 并且仅在该页面后续提交更改时更新。如果你使用默认主题，你无需安装本插件，因为```VuePress```的```core```中已经包含此插件，
 :::
 
-+ 在```config.js```的```themeConfig.lastUpdated```下使用
++ 在```config.js```的```themeConfig.lastUpdated```下使用：
 
 ```js
 module.exports = {
