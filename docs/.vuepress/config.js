@@ -9,6 +9,10 @@ module.exports = {
     markdown: {
         lineNumbers: true
     },
+    head: [
+        ['link', { rel: 'icon', href: '/logoko.png' }],
+        ['meta', { name: 'keyword', content: '郑俊仁的博客,zjr,zhengjunren,郑俊仁,郑俊仁博客'}]
+    ],
     plugins: pluginsConf,
     themeConfig: {
         nav: navConf,
