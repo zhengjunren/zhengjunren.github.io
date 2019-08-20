@@ -17,7 +17,6 @@ module.exports = {
     themeConfig: {
         nav: navConf,
         lastUpdated: '上次更新',
-        // displayAllHeaders: true,
         sidebar: sidebarConf
     }
 };
