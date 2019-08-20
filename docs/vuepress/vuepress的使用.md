@@ -39,7 +39,8 @@ yarn add -D vuepress
 
 + 默认的主题提供了一个首页（Homepage）的布局 (用于这个网站的主页)。想要使用它，需要在你的根级 README.md 的 YAML front matter 指定 home: true。以下是一个如何使用的例子：
 
-```yaml
+``` yaml
+
 ---
 home: true
 heroImage: /hero.png
@@ -56,6 +57,14 @@ features:
   details: VuePress 为每个页面预渲染生成静态的 HTML，同时在页面被加载的时候，将作为 SPA 运行。
 footer: MIT Licensed | Copyright © 2018-present Evan You
 ---
+```
+
+## 指南页
++ 即```guide```目录下的```README.md```文件中输入如下
+```
+# 指南
+
+## 这是指南页
 ```
 
 + 在package.json加入如下脚本
@@ -95,7 +104,7 @@ yarn docs:dev
 
 在浏览器中输入```http://localhost:8080```, 结果如下
 
-![](/vuepress/vuepress使用1.png)
+![vuepress使用1](/vuepress/vuepress使用1.png)
 
 :::tip 提示
 图片没有显示出来的原因是在```public```文件夹中没有```hero.png```图片
