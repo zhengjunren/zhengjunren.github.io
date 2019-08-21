@@ -11,12 +11,11 @@ module.exports = {
     },
     head: [
         ['link', { rel: 'icon', href: '/logoko.png' }],
-        ['meta', { name: 'keyword', content: '郑俊仁的博客,zjr,zhengjunren,郑俊仁,郑俊仁博客'}]
+        ['meta', { name: 'Keywords', content: '郑俊仁的博客,zjr,zhengjunren,郑俊仁,郑俊仁博客'}],
+        ['meta', { name: 'Description', content: '郑俊仁的博客,zjr,zhengjunren,郑俊仁,郑俊仁博客'}]
     ],
     plugins: pluginsConf,
     themeConfig: {
-        repo: 'zhengjunren/zhengjunren.github.io',
-        repoLabel: '查看源码',
         editLinks: true,
         // 默认为 "Edit this page"
         editLinkText: '在GitHub上编辑此页！',
