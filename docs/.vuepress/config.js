@@ -16,9 +16,6 @@ module.exports = {
     ],
     plugins: pluginsConf,
     themeConfig: {
-        editLinks: true,
-        // 默认为 "Edit this page"
-        editLinkText: '在GitHub上编辑此页！',
         nav: navConf,
         lastUpdated: '上次更新',
         sidebar: sidebarConf
