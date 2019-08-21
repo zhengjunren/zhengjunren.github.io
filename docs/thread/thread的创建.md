@@ -1,11 +1,13 @@
 # Java线程的创建
 
-+ 新建名为```hello-thread```的项目，再创建```com.example.hello.thread包。
++ 新建名为```hello-thread```的项目，再创建```com.example.hello.thread```包。
 
 ## 继承 Thread 类创建线程类
 
 + 创建```ThreadTest.java```文件
 ```java
+package com.example.hello.thread;
+
 public class ThreadTest {
 
     public static void main(String[] args) {
@@ -78,7 +80,7 @@ public class ThreadTest {
 + 创建 Callable 接口的实现类，并实现```call()```方法，该```call()```方法将作为线程执行体，并且有返回值。
 + 创建 Callable 实现类的实例，使用 FutureTask 类来包装 Callable 对象，该 FutureTask 对象封装了该 Callable 对象的```call()```方法的返回值。
 + 使用 FutureTask 对象作为 Thread 对象的 target 创建并启动新线程。
-+ 调用 FutureTask 对象的```get()```方法来获得子线程执行结束后的返回值
++ 调用 FutureTask 对象的```get()```方法来获得子线程执行结束后的返回值。
 
 ## 对比
 
