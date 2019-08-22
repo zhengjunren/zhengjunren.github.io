@@ -4,7 +4,8 @@
 
 ## 继承 Thread 类创建线程类
 
-+ 创建```ThreadTest.java```文件
++ 创建```ThreadTest.java```文件。
++ ```MyThread1```继承```Thread```类，并且重写```run()```方法。
 ```java
 package com.example.hello.thread;
 
@@ -56,6 +57,7 @@ class MyThread implements Runnable{
     }
 }
 ```
++ ```MyThread```实现```Runnable```接口，并且重写```run()```方法
 + 修改```main```方法
 
 ```java
