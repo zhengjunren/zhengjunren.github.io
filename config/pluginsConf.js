@@ -8,10 +8,5 @@ module.exports = {
     },
     // 回到顶部插件
     '@vuepress/back-to-top': true,
-    '@vuepress/medium-zoom': {
-        selector: 'img.zoom-custom-imgs',
-        options: {
-            margin: 16
-        }
-    }
+    '@vuepress/medium-zoom': true
 };
