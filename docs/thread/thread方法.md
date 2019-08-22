@@ -14,9 +14,8 @@
 
 + 例子：在上一篇文章中有哦！
 
-## join和中断线程
 
-### join
+## join
 ```public final void join()```
 + 加入线程，让调用的线程先执行指定时间或执行完毕，再执行其他线程。
 例子：
@@ -70,6 +69,8 @@ class myRunnable implements Runnable{
 ![运行结果](/thread/加入线程.PNG)
 
 + **上面例子中，加入线程，让调用的线程先执行指定时间或执行完毕，再执行主线程**
+
+## 中断线程
 
 ### interrupt
 
@@ -194,7 +195,8 @@ public static void main(String[] args) {
 ## 其他方法
 
 ```public final void setDaemon(boolean on)```
-+ 将该线程标记为守护线程或用户线程
++ 将该线程标记为守护线程或用户线程。
++ 作用：关闭程序时，可以直接结束其线程。
 :::tip 提示
 线程可以分为守护线程和用户线程，当进程中没有用户线程时，jvm会退出。
 :::
@@ -244,3 +246,33 @@ class MyRunnable2 implements Runnable{
 部分运行结果如下：
 
 ![运行结果](/thread/守护线程.PNG)
+
+```	public static void yield()```
+
++ 暂停当前正在执行的线程对象，并执行其他线程。
+
+修改```main```方法：
+
+```java
+public static void main(String[] args) {
+    MyRunnable2 myRunnable = new MyRunnable2();
+    Thread t = new Thread(myRunnable);
+    //线程可以分为守护线程和用户线程，当进程中没有用户线程时，jvm会退出
+    //把线程设置为守护线程
+    t.setDaemon(true);
+    //等待cpu调度
+    t.start();
+    for (int i = 0; i < 50; i++) {
+        System.out.println(Thread.currentThread().getName() + "--" + i);
+        try {
+            Thread.sleep(200);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        if (i == 5){
+            //让出本次CPU执行时间片
+            Thread.yield();
+        }
+    }
+}
+```
