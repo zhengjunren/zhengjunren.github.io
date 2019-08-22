@@ -1,4 +1,4 @@
-# 补充问题
+# 其他问题
 
 :::tip 备注
 从[这](https://github.com/yangchong211/YCBlogs)转载！！！
