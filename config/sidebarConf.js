@@ -5,6 +5,7 @@ const vuepress = require('./sidebar/vuepress/index');
 const markdown = require('./sidebar/markdown/index');
 const changelog = require('./sidebar/changelog/index');
 const thread = require('./sidebar/thread/index');
+const interview = require('./sidebar/interview/index');
 module.exports = {
     '/guide/': guide,
     '/maven/': maven,
@@ -14,6 +15,7 @@ module.exports = {
     '/markdown/': markdown,
     '/changelog/': changelog,
     '/thread/': thread,
+    '/interview/': interview,
     '/': [
         {
             title:'首页',

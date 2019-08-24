@@ -1,11 +1,12 @@
 const sidebarUtils = require('../../../utils/sidebarUtils');
 
-const titles = ['指南', '编程','工具'];
+const titles = ['指南', '编程','工具', '面试'];
 
 const childrenData = [
     [''],
     ['java基础','javaweb'],
-    ['vuepress','markdown']
+    ['vuepress','markdown'],
+    ['interview']
 ];
 
 module.exports = sidebarUtils.simpleGenSidebar(titles, childrenData);
