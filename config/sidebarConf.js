@@ -6,6 +6,7 @@ const markdown = require('./sidebar/markdown/index');
 const changelog = require('./sidebar/changelog/index');
 const thread = require('./sidebar/thread/index');
 const interview = require('./sidebar/interview/index');
+const bugs = require('./sidebar/bugs/index');
 module.exports = {
     '/guide/': guide,
     '/maven/': maven,
@@ -16,6 +17,7 @@ module.exports = {
     '/changelog/': changelog,
     '/thread/': thread,
     '/interview/': interview,
+    '/bugs/': bugs,
     '/': [
         {
             title:'首页',
