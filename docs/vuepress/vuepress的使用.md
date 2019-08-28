@@ -1,7 +1,7 @@
-﻿# vuepress的使用
+﻿# VuePress的使用
 
 ::: tip 备注
-个人使用习惯，参照官网的[默认主题配置](https://vuepress.vuejs.org/zh/default-theme-config/)。
+个人使用习惯，参照官网的[默认主题配置](https://v1.vuepress.vuejs.org/zh/theme/default-theme-config.html)。
 :::
 
 ## 初始化

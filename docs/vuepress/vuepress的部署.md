@@ -1,4 +1,4 @@
-# vuepress部署
+# VuePress部署
 
 ## 部署GithubPages
 

@@ -1,6 +1,6 @@
 const sidebarUtils = require('../../../utils/sidebarUtils');
 
-const titles = ['vuepress', '安装', '使用'];
+const titles = ['VuePress', '安装', '使用'];
 
 const childrenData = [
     [''],

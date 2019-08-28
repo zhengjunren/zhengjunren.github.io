@@ -1,4 +1,4 @@
-# vuepress的初步使用
+# VuePress的初步使用
 
 ## 环境要求
 ::: warning 注意

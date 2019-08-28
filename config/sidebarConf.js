@@ -7,6 +7,8 @@ const changelog = require('./sidebar/changelog/index');
 const thread = require('./sidebar/thread/index');
 const interview = require('./sidebar/interview/index');
 const bugs = require('./sidebar/bugs/index');
+const site = require('./sidebar/site/index');
+const internet = require('./sidebar/internet/index');
 module.exports = {
     '/guide/': guide,
     '/maven/': maven,
@@ -18,6 +20,8 @@ module.exports = {
     '/thread/': thread,
     '/interview/': interview,
     '/bugs/': bugs,
+    '/site/': site,
+    '/internet/': internet,
     '/': [
         {
             title:'首页',

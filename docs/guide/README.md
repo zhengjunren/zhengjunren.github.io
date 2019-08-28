@@ -1,19 +1,17 @@
 # 博客介绍
 
-## 简介
+## 网站简介
 
 在自己的编程过程中，从面向过程，再到**面向对象**，中间还有面向CSDN 😁，
 并且还有许多代码，方法，通用类很难记，所以搭建这个博客。
 希望在对自己的知识进行总结的同时，亦能接收网友的意见。
 
-## 分类
+另外，代码会放在[**GitHub**](https://github.com/zhengjunren/)和[**码云**](https://gitee.com/zhengjunren/)上！
+
+## 网站分类
 
 目前分为```Java基础```、```JavaWeb```和一些工具的使用，现在博客还不完整，
 以后有时间会慢慢补充，并且还想添加一些微服务的概念和```helloworld```工程。
-
-## 代码托管
-
-代码会放在[**GitHub**](https://github.com/zhengjunren/)和[**码云**](https://gitee.com/zhengjunren/)上！
 
 ## 版权与声明
 

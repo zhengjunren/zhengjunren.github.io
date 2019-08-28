@@ -1,4 +1,4 @@
-# vuepress的安装
+# VuePress的安装
 
 ## 环境要求
 ::: warning 注意

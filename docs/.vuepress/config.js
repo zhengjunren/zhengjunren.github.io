@@ -10,7 +10,7 @@ module.exports = {
         lineNumbers: true
     },
     head: [
-        ['link', { rel: 'icon', href: '/logoko.png' }],
+        ['link', { rel: 'icon', href: '/hero.png' }],
         ['meta', { name: 'Keywords', content: '郑俊仁的博客,zjr,zhengjunren,郑俊仁,郑俊仁博客'}],
         ['meta', { name: 'Description', content: '郑俊仁的博客,zjr,zhengjunren,郑俊仁,郑俊仁博客'}]
     ],
