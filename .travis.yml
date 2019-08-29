@@ -14,4 +14,8 @@ deploy:
 before_install:
   - export TZ='Asia/Shanghai'
   on:
+<<<<<<< blog-source
     branch: blog-source
+=======
+    branch: master
+>>>>>>> local
