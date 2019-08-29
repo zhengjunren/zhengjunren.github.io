@@ -10,5 +10,7 @@ deploy:
   github-token: $GITHUB_TOKEN
   keep-history: true
   target_branch: master
+before_install:
+  - export TZ='Asia/Shanghai'
   on:
-    branch: gh-pages
+    branch: blog-source
