@@ -8,5 +8,11 @@ module.exports = {
     },
     // 回到顶部插件
     '@vuepress/back-to-top': true,
-    '@vuepress/medium-zoom': true
+    '@vuepress/medium-zoom': true,
+    'mathjax': {
+        target: 'svg',
+        macros: {
+        '*': '\\times',
+        },
+    }
 };
