@@ -1,0 +1,17 @@
+
+### nodejs ###
+.idea
+node_modules/
+*.sh
+#*.bat
+#*.json
+*.lock
+
+### config ###
+#config/
+
+### utils ###
+#utils/
+
+### html ###
+docs/.vuepress/dist
