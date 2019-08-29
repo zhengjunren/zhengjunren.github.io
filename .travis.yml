@@ -2,7 +2,6 @@ language: node_js
 node_js:
   - lts/*
 script:
-  - echo "hello"
   - npm run docs:build
 deploy:
   provider: pages
@@ -14,6 +13,4 @@ deploy:
 before_install:
   - export TZ='Asia/Shanghai'
   on:
-    branches:    # ← new!
-      only:      # ← new!
-        - blog-source # ← new!
+    branch: blog-source
