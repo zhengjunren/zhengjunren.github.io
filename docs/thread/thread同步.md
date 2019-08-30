@@ -67,29 +67,29 @@ class MyRunnable3 implements Runnable {
 :::
 ```java
 //同步方法的同步对象是当前对象
-    private synchronized void sell(){
-        if (ticket > 0){
-            try {
-                System.out.println("您正在购买第"+ticket + "张，正在购买中");
-                ticket--;
-                Thread.sleep(1000);
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-            }
-            System.out.println("购买成功，还有" + ticket + "张未售出");
+private synchronized void sell(){
+    if (ticket > 0){
+        try {
+            System.out.println("您正在购买第"+ticket + "张，正在购买中");
+            ticket--;
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
         }
+        System.out.println("购买成功，还有" + ticket + "张未售出");
     }
+}
 ```
 
 修改```MyRunnable3```中的```run()```方法
 
 ```java
 @Override
-    public void run() {
-        for (int i = 0; i < 300; i++) {
-            sell();
-        }
+public void run() {
+    for (int i = 0; i < 300; i++) {
+        sell();
     }
+}
 ```
 结果和上面一样。
 
@@ -99,37 +99,37 @@ class MyRunnable3 implements Runnable {
 
 ```java
 //互斥锁
-    private ReentrantLock lock = new ReentrantLock();
+private ReentrantLock lock = new ReentrantLock();
 
-    //Lock实现同步
-    private void sellByLock(){
-        //获取锁
-        lock.lock();
-        try {
-            if (ticket > 0){
-                try {
-                    System.out.println("您正在购买第"+ticket + "张，正在购买中");
-                    ticket--;
-                    Thread.sleep(1000);
-                } catch (InterruptedException e) {
-                    e.printStackTrace();
-                }
-                System.out.println("购买成功");
+//Lock实现同步
+private void sellByLock(){
+    //获取锁
+    lock.lock();
+    try {
+        if (ticket > 0){
+            try {
+                System.out.println("您正在购买第"+ticket + "张，正在购买中");
+                ticket--;
+                Thread.sleep(1000);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
             }
-        } finally {
-            //释放锁
-            lock.unlock();
+            System.out.println("购买成功");
         }
+    } finally {
+        //释放锁
+        lock.unlock();
     }
+}
 ```
 修改```MyRunnable3```中的```run()```方法
 ```java
 @Override
-    public void sellByLock() {
-        for (int i = 0; i < 300; i++) {
-            sell();
-        }
+public void sellByLock() {
+    for (int i = 0; i < 300; i++) {
+        sell();
     }
+}
 ```
 
 ## 区别
