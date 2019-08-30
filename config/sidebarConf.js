@@ -9,6 +9,7 @@ const interview = require('./sidebar/interview/index');
 const bugs = require('./sidebar/bugs/index');
 const site = require('./sidebar/site/index');
 const internet = require('./sidebar/internet/index');
+const git = require('./sidebar/git/index');
 module.exports = {
     '/guide/': guide,
     '/maven/': maven,
@@ -22,6 +23,7 @@ module.exports = {
     '/bugs/': bugs,
     '/site/': site,
     '/internet/': internet,
+    '/git/': git,
     '/': [
         {
             title:'首页',
