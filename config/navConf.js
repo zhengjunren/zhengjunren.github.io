@@ -20,6 +20,7 @@ module.exports = [
                     { text: '代码格式化', link: 'https://www.bejson.com/jshtml_format/' },
                     { text: '二维码生成器', link: 'https://cli.im/' },
                     { text: 'YAML <--> Properties', link: 'https://www.toyaml.com/index.html' },
+                    { text:  'TeX使用', link: 'http://latex.codecogs.com/eqneditor/editor.php'},
                 ]
             },
             {
