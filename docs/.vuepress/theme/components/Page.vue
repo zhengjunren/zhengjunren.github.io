@@ -58,13 +58,16 @@
     </div>
 
     <slot name="bottom"/>
+    <PushSite></PushSite>
   </main>
 </template>
 
 <script>
 import { resolvePage, outboundRE, endingSlashRE } from '../util'
+import PushSite from "../global-components/PushSite";
 
 export default {
+  components: {PushSite},
   props: ['sidebarItems'],
 
   computed: {

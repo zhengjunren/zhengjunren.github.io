@@ -46,14 +46,16 @@
     >
       {{ data.footer }}
     </div>
+    <PushSite></PushSite>
   </main>
 </template>
 
 <script>
 import NavLink from '@theme/components/NavLink.vue'
+import PushSite from "../global-components/PushSite";
 
 export default {
-  components: { NavLink },
+  components: {PushSite, NavLink },
 
   computed: {
     data () {
