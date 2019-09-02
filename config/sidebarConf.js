@@ -10,6 +10,7 @@ const bugs = require('./sidebar/bugs/index');
 const site = require('./sidebar/site/index');
 const internet = require('./sidebar/internet/index');
 const git = require('./sidebar/git/index');
+const mydoc = require('./sidebar/mydoc/index');
 module.exports = {
     '/guide/': guide,
     '/maven/': maven,
@@ -24,6 +25,7 @@ module.exports = {
     '/site/': site,
     '/internet/': internet,
     '/git/': git,
+    '/mydoc/': mydoc,
     '/': [
         {
             title:'首页',
