@@ -4,7 +4,7 @@ module.exports = [
     { text: '站点',
         items: [
             {text: 'GitHub', link: 'https://zhengjunren.github.io/'},
-            {text: 'Gitee(暂不更新)', link: 'https://zhengjunren.gitee.io/'}
+            {text: 'Gitee', link: 'https://zhengjunren.gitee.io/'}
         ]
     },
     {
