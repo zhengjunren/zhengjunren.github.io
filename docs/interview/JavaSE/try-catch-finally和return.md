@@ -90,6 +90,9 @@ private int print4() {
 输出结果：
 > this is finally + print4：1
 
+## 特殊情况
+当```try```中存在```System.exit(0);```语句时，不会执行```finally```块中的代码。
+
 ## 测试源码
 
 ```java
@@ -113,6 +116,7 @@ public class TestTryCatch {
 //        System.out.println(" + print2：" + print2());
 //        System.out.println(" + print3：" + print3());
 //        System.out.println(" + print4：" + print4());
+//        System.out.println(print5());
 
     }
 
@@ -161,6 +165,21 @@ public class TestTryCatch {
         }finally{
             System.out.print("this is finally");
             result = 2;
+        }
+    }
+
+    private int print5() {
+        int i = 0;
+        try {
+            int j = 10 / 0;
+            return ++i;
+        }catch (Exception e) {
+            e.printStackTrace();
+            System.exit(0);
+            return i;
+        }finally {
+            System.out.println("finally");
+            return i;
         }
     }
 }
