@@ -7,7 +7,7 @@ module.exports = {
     title: '郑俊仁',
     description: '郑俊仁的博客,zjr,zhengjunren,郑俊仁,郑俊仁博客',
     markdown: {
-        lineNumbers: true
+        lineNumbers: true,
     },
     head: [
         ['link', { rel: 'icon', href: '/icon.png' }],
