@@ -22,11 +22,7 @@
 
 ## VuePress的使用
 
-::: tip 提示
-[官方网站（中文）](https://v1.vuepress.vuejs.org/zh/)
-:::
-
-### VuePress是Vue 驱动的静态网站生成器
+[VuePress](https://v1.vuepress.vuejs.org/zh/)是Vue驱动的静态网站生成器
 
 + **简洁至上**：以 Markdown 为中心的项目结构，以最少的配置帮助你专注于写作。
 + **Vue驱动**：享受```Vue + webpack```的开发体验，可以在```Markdown```中使用```Vue```组件，又可以使用```Vue```来开发自定义主题。
