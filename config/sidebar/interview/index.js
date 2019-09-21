@@ -1,6 +1,6 @@
 const sidebarUtils = require('../../../utils/sidebarUtils');
 
-const titles = ['面试介绍', 'JavaSE', 'JavaEE'];
+const titles = ['面试介绍', 'JavaSE', 'JavaEE', '前端'];
 
 const childrenData = [
     [''],
@@ -11,7 +11,8 @@ const childrenData = [
         'JavaSE/类初始化顺序', 
         'JavaSE/final、finally和finalize的区别', 
     ],
-    ['JavaEE/HTTP请求的GET与POST方式的区别', 'JavaEE/httpstatus',]
+    ['JavaEE/HTTP请求的GET与POST方式的区别', 'JavaEE/httpstatus',],
+    ['frontend/前端']
 ];
 
 module.exports = sidebarUtils.simpleGenSidebar(titles, childrenData);

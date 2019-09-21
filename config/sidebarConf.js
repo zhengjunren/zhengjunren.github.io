@@ -10,6 +10,7 @@ const bugs = require('./sidebar/bugs/index');
 const site = require('./sidebar/site/index');
 const internet = require('./sidebar/internet/index');
 const git = require('./sidebar/git/index');
+const dataStructure = require('./sidebar/data-structure/index');
 const mydoc = require('./sidebar/mydoc/index');
 module.exports = {
     '/guide/': guide,
@@ -25,6 +26,7 @@ module.exports = {
     '/site/': site,
     '/internet/': internet,
     '/git/': git,
+    '/data-structure/': dataStructure,
     '/mydoc/': mydoc,
     '/': [
         {
