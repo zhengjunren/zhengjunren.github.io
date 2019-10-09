@@ -6,27 +6,19 @@
 
 [**了解一下**](/git)
 
+## Docker安装与使用
+```docker```和```docker-compose```的常用命令
+
+[**了解一下**](/docker/Ubuntu安装Docker.html)
+
 ## Markdown的使用
-
-### 概述
-
-+ Markdown 是一种轻量级标记语言，它允许人们使用易读易写的纯文本格式编写文档。
-
-+ Markdown 语言在 2004 由约翰·格鲁伯（英语：John Gruber）创建。
-
-+ Markdown 编写的文档可以导出 ```HTML``` 、```Word```、```PDF```、```Epub``` 等多种格式的文档。
-
-+ Markdown 编写的文档后缀为 ```.md```, ```.markdown```。
+```markdown```的语法
 
 [**了解一下**](/markdown)
 
 ## VuePress的使用
 
-[VuePress](https://v1.vuepress.vuejs.org/zh/)是Vue驱动的静态网站生成器
-
-+ **简洁至上**：以 Markdown 为中心的项目结构，以最少的配置帮助你专注于写作。
-+ **Vue驱动**：享受```Vue + webpack```的开发体验，可以在```Markdown```中使用```Vue```组件，又可以使用```Vue```来开发自定义主题。
-+ **高性能**：VuePress 会为每个页面预渲染生成静态的 HTML，同时，每个页面被加载的时候，将作为 SPA 运行。
+[VuePress](https://v1.vuepress.vuejs.org/zh/)使用到部署
 
 [**了解一下**](/vuepress)
 
