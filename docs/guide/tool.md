@@ -6,11 +6,6 @@
 
 [**了解一下**](/git)
 
-## Docker安装与使用
-```docker```和```docker-compose```的常用命令
-
-[**了解一下**](/docker/Ubuntu安装Docker.html)
-
 ## Markdown的使用
 ```markdown```的语法
 
