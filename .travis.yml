@@ -19,6 +19,5 @@ notifications:
   email:
     recipients:
       - 1440629746@qq.com
-      - zhengjr989@163.com
     on_success: always # default: change
     on_failure: always # default: always
