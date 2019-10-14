@@ -52,3 +52,54 @@
 改变访问权限
 
 `chmod [who] [+ | - | =] [mode] 文件名`
+
+#### who
+
+u：用户 user
+g：用户组 group
+o：表示其他用户
+a：表示所有用户是系统默认的
+
+#### 操作符号
+
++：表示添加某个权限
+-：表示取消某个权限
+=：赋予给定的权限，取消文档以前的所有权限
+
+#### mode
+
+表示可执行的权限，可以是 r、w、x
+
+#### 文件名
+文件名可以使空格分开的文件列表
+
+## 数字设定法
+数字设定法中数字表示的含义
+
++ 0 表示没有任何权限
++ 1 表示有可执行权限 = `x`
++ 2 表示有可写权限 = `w`
++ 4 表示有可读权限 = `r`
+
+也可以用数字来表示权限如 `chmod 755 file_name`
+
+|r w x|r – x|r - x|
+|-----|-----|-----|
+|4 2 1|4 - 1|4 - 1|
+|user|group|others|
+
+若要 rwx 属性则 4+2+1=7
+
+若要 rw- 属性则 4+2=6
+
+若要 r-x 属性则 4+1=5
+
+```sh
+root@ubuntu:/home/zjr/test# chmod 777 test.txt 
+root@ubuntu:/home/zjr/test# ls -al test.txt 
+-rwxrwxrwx 1 root root 0 Oct 14 09:50 test.txt
+
+root@ubuntu:/home/zjr/test# chmod 770 test.txt
+root@ubuntu:/home/zjr/test# ls -al test.txt 
+-rwxrwx--- 1 root root 0 Oct 14 09:50 test.txt
+```
