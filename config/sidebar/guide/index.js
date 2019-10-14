@@ -6,7 +6,7 @@ const childrenData = [
     [''],
     ['basic-theory'],
     ['java基础','javaweb', '开发环境'],
-    ['interview','bug', 'tool', '优秀网站收集']
+    ['bug','interview', 'tool', '优秀网站收集']
 ];
 
 module.exports = sidebarUtils.simpleGenSidebar(titles, childrenData);
