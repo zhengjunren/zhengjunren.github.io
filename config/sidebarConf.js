@@ -13,6 +13,7 @@ const git = require('./sidebar/git/index');
 const dataStructure = require('./sidebar/data-structure/index');
 const mydoc = require('./sidebar/mydoc/index');
 const docker = require('./sidebar/docker/index');
+const linux = require('./sidebar/linux/index');
 module.exports = {
     '/guide/': guide,
     '/maven/': maven,
@@ -30,6 +31,7 @@ module.exports = {
     '/data-structure/': dataStructure,
     '/mydoc/': mydoc,
     '/docker/': docker,
+    '/linux/': linux,
     '/': [
         {
             title:'首页',

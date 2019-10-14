@@ -1,6 +1,6 @@
 const sidebarUtils = require('../../../utils/sidebarUtils');
 
-const titles = ['Docker', 'Docker安装', 'Docker 镜像', 'Docker 容器', 'Docker 数据管理', 'Docker Compose', '常用命令'];
+const titles = ['Docker', 'Docker 安装', 'Docker 镜像', 'Docker 容器', 'Docker 数据管理', 'Docker Compose', '常用命令'];
 
 const childrenData = [
     ['', 'why'],
