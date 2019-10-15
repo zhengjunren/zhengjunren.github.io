@@ -24,21 +24,7 @@ mv apache-maven-3.5.3 /usr/local/maven/
 
 ## 配置环境变量
 
-### 配置系统环境变量
 > 注意：本文中安装 maven 是在安装 java 的基础上进行的。
-
-```sh
-vi /etc/environment
-```
-
-添加第一行，将原先的`path`修改为第五行：
-```{1,5}
-export MAVEN_HOME=/usr/local/maven/apache-maven-3.5.3
-export JAVA_HOME=/usr/local/java/jdk1.8.0_152
-export JRE_HOME=/usr/local/java/jdk1.8.0_152/jre
-export CLASSPATH=$CLASSPATH:$JAVA_HOME/lib:$JAVA_HOME/jre/lib
-export PATH=$JAVA_HOME/bin:$JAVA_HOME/jre/bin:$MAVEN_HOME/bin:$PATH:$HOME/bin
-```
 
 ### 配置用户环境变量
 ```sh

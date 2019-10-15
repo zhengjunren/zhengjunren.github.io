@@ -40,7 +40,7 @@ vi /etc/environment
 PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games"
 export JAVA_HOME=/usr/local/java/jdk1.8.0_152
 export JRE_HOME=/usr/local/java/jdk1.8.0_152/jre
-export PATH=$JAVA_HOME/bin:$JAVA_HOME/jre/bin:$MAVEN_HOME/bin:$PATH:$HOME/bin
+export CLASSPATH=$CLASSPATH:$JAVA_HOME/lib:$JAVA_HOME/jre/lib
 ```
 
 ### 配置用户环境变量
