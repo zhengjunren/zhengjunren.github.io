@@ -19,7 +19,7 @@ sudo apt-get -y install bind9
 首先，修改`/etc/bind/named.conf.local`文件，在里面添加以下信息:
 
 ```sh
-sudo mv /etc/bind/named.conf.local /etc/bind/named.conf.local-bak
+sudo cp /etc/bind/named.conf.local /etc/bind/named.conf.local-bak
 sudo vim /etc/bind/named.conf.local
 ```
 
@@ -63,12 +63,12 @@ zone "182.168.192.in-addr.arpa" {
 然后，我们复制一个现有的文件作为`Zone`文件的模板（注意**文件名是局域网IP地址前三个字节的倒写**，我的局域网IP是`192.168.182.134`);
 
 ```sh
-sudo cp /etc/bind/db.127 /var/cache/bind/db.191.168.192
+sudo cp /etc/bind/db.127 /var/cache/bind/db.182.168.192
 ```
 修改该`Zone`文件
 
 ```sh
-sudo vim /var/cache/bind/db.191.168.192
+sudo vim /var/cache/bind/db.182.168.192
 ```
 改成如下内容:
 

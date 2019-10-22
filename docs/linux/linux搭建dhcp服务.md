@@ -26,8 +26,24 @@ $ sudo vim /etc/default/isc-dhcp-server
 $ sudo vim /etc/dhcp/dhcpd.conf
 ```
 文件内容中需要配置的是域名和子网IP等信息，对于第一文件片段中的
-option domain-name “example.org” 不用修改，下一行的domain-name-server需要注释掉在第二文件片段中补充。对于第二文件片段中的白色部分，全是新添加的信息。目标主机的子网IP为192.168.182.134，因此subnet为192.168.182.0，DHCP分配范围设置为10-100，其余地址留给广播和静态IP。网关和DNS均设置为192.168.182.1，广播地址为192.168.182.255，ntp-servers和netbios-name-servers设置与DNS一致，netbios-node-type默认为8
+`option domain-name “example.org”`不用修改，下一行的`domain-name-server`需要注释掉在第二文件片段中补充。对于第二文件片段中的白色部分，全是新添加的信息。目标主机的子网IP为`192.168.182.134`，因此subnet为`192.168.182.0`，DHCP分配范围设置为10-100，其余地址留给广播和静态IP。网关和DNS均设置为`192.168.182.1`，广播地址为`192.168.182.255`，`ntp-servers和netbios-name-servers`设置与DNS一致，`netbios-node-type`默认为 8
+
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/20191021161151349.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxNDk1MzQw,size_16,color_FFFFFF,t_70)
+
+添加如下内容：
+```
+subnet 192.168.182.0 netmask 255.255.255.0 {
+range 192.168.182.10 192.168.182.100;
+option domain-name-servers 202.206.192.33, 223.5.5.5;
+option domain-name "zxc.com";
+option subnet-mask 255.255.255.0;
+option routers 192.168.182.1;
+option broadcast-address 192.168.182.255;
+default-lease-time 600;
+max-lease-time 7200;
+}
+```
+
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/20191021161003802.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxNDk1MzQw,size_16,color_FFFFFF,t_70)
 
 5. 配置完成之后重启DHCP服务,查看效果：
