@@ -3,7 +3,19 @@
 ## 概述
 本文中，dns服务器使用的是`bind`，邮件服务器使用的是`sendmail`，`dovecot`。 
 其中`centos`的 IP 地址为：`192.168.223.131`
+## 关闭防火墙
 
+
+```sh{2}
+# 临时关闭
+systemctl stop firewalld
+
+# 永久关闭
+systemctl disable firewalld 
+
+# 查看防火墙状态
+systemctl status  firewalld 
+```
 
 ## 安装配置 DNS
 首先，查看系统中是否已经安装了`bind`,查看命令如下：
@@ -185,7 +197,7 @@ Connect:localhost.localdomain           RELAY
 Connect:localhost                       RELAY
 Connect:127.0.0.1                       RELAY
 Connect:zjr.com                         RELAY
-Connetc:192.168.223.*                   RELAY
+Connect:192.168.223.*                   RELAY
 ```
 在执行如下命令：
 ```sh
