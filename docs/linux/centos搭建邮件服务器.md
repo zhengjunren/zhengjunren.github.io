@@ -150,10 +150,15 @@ Name:	zjr.com
 Address: 192.168.223.131
 ```
 
-修改`/etc/sysconfig/network`:
+打开`/etc/sysconfig/network`:
 ```sh
 vi /etc/sysconfig/network
 ```
+增加：
+```
+localhost.localdomain
+```
+
 修改主机名：
 ```sh
 hostnamectl set-hostname zjr.com
