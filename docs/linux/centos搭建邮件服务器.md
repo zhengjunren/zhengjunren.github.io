@@ -1,6 +1,9 @@
 # CentOS 搭建邮件服务器
 
 ## 概述
+
+**注意：在搭建此服务器之前，请准备一台干净的centos，在安装时，将主机名设置为localhost！！！！！！！！！！不然很有可能失败！**
+
 本文中，dns服务器使用的是`bind`，邮件服务器使用的是`sendmail`，`dovecot`。 
 其中`centos`的 IP 地址为：`192.168.223.131`
 ## 关闭防火墙
@@ -204,7 +207,7 @@ Connect:192.168.223.*                   RELAY
 makemap hash access.db < access
 ```
 
-打开`sendmain.mc`,找到下图中处：
+打开`sendmail.mc`,找到下图中处：
 ![sendmail1](/linux/sendmail1.PNG "sendmail1")
 改为：
 ```
