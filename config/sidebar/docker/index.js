@@ -9,7 +9,7 @@ const childrenData = [
     ['container/', 'container/run', 'container/daemon', 'container/stop', 'container/attach_exec'],
     ['data-management/' ,'data-management/volume', 'data-management/bind-mounts'],
     ['compose/', 'compose/install', 'compose/usage', 'compose/commands', 'compose/compose_file','compose/net'],
-    ['case/基于docker搭建mysql','case/基于docker搭建samba', 'case/基于docker搭建ftp'],
+    ['case/基于docker搭建mysql', 'case/基于docker搭建apache','case/基于docker搭建samba', 'case/基于docker搭建ftp'],
     ['other/Docker常用命令',  'other/Docker命令查询', 'other/Docker-Compose常用命令']
 ];
 
