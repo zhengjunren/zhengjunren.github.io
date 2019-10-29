@@ -114,10 +114,10 @@ $TTL 1D
         IN MX 10 pop.zjr.com.
         IN MX 10 smtp.zjr.com.
 dns     A       192.168.223.131
+@       A       192.168.223.131
 www     A       192.168.223.131
 pop     A       192.168.223.131
 smtp    A       192.168.223.131
-@       A       192.168.223.131
 ```
 接着打开`zjr.loopback`,可以看到：
 ```
@@ -153,6 +153,13 @@ $TTL 1D
 DNS1 = "127.0.0.1"
 ```
 最后，检查是否配置成功：
+
+先重启`named`和`network`服务：
+```sh
+service named restart
+service network restart
+```
+再执行如下命令：
 ```sh
 nslookup zjr.com
 ```
