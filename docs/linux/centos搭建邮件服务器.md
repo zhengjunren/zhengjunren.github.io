@@ -193,7 +193,7 @@ rpm -qa | grep sendmail
 ```
 安装命令：
 ```sh
-yum -y install sendmail
+yum -y install sendmail sendmail-cf
 ```
 
 进入`/etc/mail`目录，打开`access`文件
