@@ -3,7 +3,7 @@
 ## vsftpd
 镜像地址：<https://hub.docker.com/r/fauria/vsftpd>
 
-+ 注意修改`PASV_ADDRESS`属性
++ **注意修改`PASV_ADDRESS`属性**
 
 ```yaml
 version: "3"
@@ -31,8 +31,8 @@ services:
 ## 配置文件
 
 + `vsftpd.conf`:
-
-```conf
++ **注意修改`pasv_address`属性**
+```conf{50,58}
 # Run in the foreground to keep the container running:
 background=NO
 
