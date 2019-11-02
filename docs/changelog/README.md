@@ -1,7 +1,12 @@
 # 最近更新
 
+## 2019-11
++ 网站新增在 GitHub 上编辑功能。
+
+[**看一看**](/changelog/2019-11.html)
+
 ## 2019-10
-+ 新增 Linux 的使用和在 Linux 上搭建服务
++ 新增 Linux 的使用和在 Linux 上搭建服务。
 + 新增 Docker 和 Docker-Compose 的使用。
 
 [**看一看**](/changelog/2019-10.html)

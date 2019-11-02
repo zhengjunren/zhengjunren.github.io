@@ -48,6 +48,6 @@ module.exports = [
             },
         ],
     },
-    { text: 'GitHub', link: 'https://github.com/zhengjunren' },
+    // { text: 'GitHub', link: 'https://github.com/zhengjunren' },
     { text: 'ChangeLog', link: '/changelog/'}
 ];
