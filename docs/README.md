@@ -12,6 +12,6 @@ features:
   details: 学习使我快乐，学习没有银弹，知识要慢慢积累。
 - title: 有了钱快乐吗
   details: 不！你错了，有钱人的快乐，你根本想象不到！
-footer: © Copyright 2018 郑俊仁 - All Rights Reserved
+footer: © Copyright 2019 郑俊仁 - All Rights Reserved
 ---
 

@@ -5,7 +5,7 @@
 
 + **注意修改`PASV_ADDRESS`属性**
 
-```yaml
+```yaml {18}
 version: "3"
 services:
   ftp:

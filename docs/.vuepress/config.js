@@ -17,6 +17,8 @@ module.exports = {
     plugins: pluginsConf,
     themeConfig: {
         nav: navConf,
+        logo: '/hero.png',
+        smoothScroll: true,
         lastUpdated: '上次更新',
         sidebar: sidebarConf,
         repo: 'zhengjunren/zhengjunren.github.io',
