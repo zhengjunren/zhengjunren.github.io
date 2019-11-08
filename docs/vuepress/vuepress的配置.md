@@ -92,3 +92,15 @@ module.exports = {
 }
 ```
 请注意，```themeConfig.lastUpdated```默认是关闭的，如果给定一个字符串，它将会作为前缀显示（默认值是：Last Updated）。
+
+## 其他 <Badge text="beta" type="warn"/> <Badge text="0.10.1+"/> <Badge text="默认主题"/>
+
++ Props:
+  + `text` - string
+  + `type` - string, 可选值： `"tip"|"warn"|"error"`，默认值是： `"tip"`
+  + `vertical` - string, 可选值： `"top"|"middle"`，默认值是： `"top"`
++ Usage:
+你可以在标题中，使用这个组件来为某些 API 添加一些状态：
+```md
+## 其他 <Badge text="beta" type="warn"/> <Badge text="0.10.1+"/> <Badge text="默认主题"/>
+```
