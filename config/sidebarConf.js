@@ -14,8 +14,10 @@ const dataStructure = require('./sidebar/data-structure/index');
 const mydoc = require('./sidebar/mydoc/index');
 const docker = require('./sidebar/docker/index');
 const linux = require('./sidebar/linux/index');
+const resume = require('./sidebar/resume/index');
 module.exports = {
     '/guide/': guide,
+    '/resume/': resume,
     '/maven/': maven,
     '/mvc/': mvc,
     '/spring/': [''],
