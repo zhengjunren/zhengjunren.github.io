@@ -1,6 +1,7 @@
 module.exports = [
     { text: '首页', link: '/' },
     { text: '指南', link: '/guide/' },
+    { text: '简历', link: '/resume/'},
     { text: '站点',
         items: [
             {text: 'GitHub', link: 'https://zhengjunren.github.io/'},
