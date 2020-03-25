@@ -36,16 +36,16 @@
     - 项目开发环境：windows10，jdk1.8, redis, mysql, elasticsearch。
 
 ### 技术文章
-- [**VuePress的使用**](https://zhengjunren.github.io/vuepress/)
+- [**VuePress的使用**](/vuepress/)
   - vuepress 的初步使用
   - vuepress 的 sidebar, nav, plugins 的配置。
   - vuepress 的部署和持续集成。
-- [**基于Linux部署服务**](http://localhost:8080/linux/)
-  - [Linux 安装 Java](https://zhengjunren.github.io/linux/%E5%AE%89%E8%A3%85java.html)
-  - [Linux 安装 Maven](https://zhengjunren.github.io/linux/%E5%AE%89%E8%A3%85maven.html)
-  - [CentOS 搭建邮件服务器](https://zhengjunren.github.io/linux/centos%E6%90%AD%E5%BB%BA%E9%82%AE%E4%BB%B6%E6%9C%8D%E5%8A%A1%E5%99%A8.html)
+- [**基于Linux部署服务**](/linux/)
+  - [Linux 安装 Java](/linux/%E5%AE%89%E8%A3%85java.html)
+  - [Linux 安装 Maven](/linux/%E5%AE%89%E8%A3%85maven.html)
+  - [CentOS 搭建邮件服务器](/linux/centos%E6%90%AD%E5%BB%BA%E9%82%AE%E4%BB%B6%E6%9C%8D%E5%8A%A1%E5%99%A8.html)
 ## 技能清单
-以下均为我熟练使用的技能
+以下均为我使用并掌握的技能：
 
 - **Web开发：Java/Node/Tomcat/Maven**
 - **微服务：SpringCloudAlibaba/Docker**
