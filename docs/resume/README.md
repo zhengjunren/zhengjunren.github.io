@@ -7,6 +7,7 @@
 ### 基本信息
  - **郑俊仁**/男/1998/本科
  - 英语：CET-4
+ - 学校专业：江西财经大学软件与物联网工程学院软件工程
  - 技术博客：<http://zhengjunren.github.io>
  - Github：<http://github.com/zhengjunren>
  - 期望职位：Java程序员，**后台开发方向**
@@ -18,22 +19,24 @@
 - Email：zhengjr989@qq.com 
 - 微信号：w19981004
 
+
 ## 个人经历
 ### 教育经历
 
 + **江西财经大学**：
-  + 软件与物联网工程学院软件工程专业。
-  + 担任过班级组织委员，国旗队学生干部。
-  + 获得荣誉：获得校级奖学金，三号学生、优秀团干等。
+  + 2017 至 2018 年：担任过班级组织委员，获得优秀团干称号。
+  + 2018 至 2019 年：国旗队学生干部。获得三好学生称号。
+  + 2019 至 2020 年：软件学院《计算机运用》课程助教，获得校级奖学金。
 
 ## 个人作品
 ### 开源项目
- - [**blog-admin**](https://github.com/zhengjunren/myblog/tree/single)：
+ - [**blog-admin**](http://test.zhengjunren.cn)<Badge text="点击 blog-admin 预览"/>
     - 一个基于 Spring Boot 2.2.4 、 Mybatis-plus、 JWT、Spring Security、Redis、Vue的前后端分离的后台管理系统
-    - **技术栈**：**Springboot、Spring-Security**、MapStruct、mybatis-plus、quarz、**vue、axios、vue-element-admin、docker**、elasticsearch、redis等。
+    - **技术栈**：**Springboot、Spring-Security**、MapStruct、mybatis-plus、quarz、**vue、axios、vue-element-admin、element-ui、docker**、elasticsearch、redis等。
      - **贡献**：前端模板为 vue-element-admin，后端自主开发。
-    - 博客系统后台管理系统: 在线用户、日志管理、权限管理、文章管理、定时任务、存储管理、七牛云文件管理。
+    - 功能: 在线用户、日志管理、权限管理、文章管理、标签管理、定时任务、存储管理、七牛云文件管理。
     - 项目开发环境：windows10，jdk1.8, redis, mysql, elasticsearch。
+    - 项目地址：<https://github.com/zhengjunren/myblog/tree/single>
 
 ### 技术文章
 - [**VuePress的使用**](/vuepress/)
