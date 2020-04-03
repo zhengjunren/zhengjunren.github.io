@@ -10,7 +10,10 @@ const childrenData = [
         'JavaSE/重载和重写的区别', 
         'JavaSE/类初始化顺序', 
         'JavaSE/final、finally和finalize的区别', 
-        'JavaSE/Java四种引用类型'
+        'JavaSE/Java四种引用类型',
+        'JavaSE/Collection和Collections有什么区别？',
+        'JavaSE/List、Set、Map之间的区别',
+        'JavaSE/ArrayList 与 LinkedList 区别'
     ],
     ['JavaEE/HTTP请求的GET与POST方式的区别', 'JavaEE/httpstatus',],
     ['frontend/前端'],
