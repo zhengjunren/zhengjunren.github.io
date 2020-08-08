@@ -3,7 +3,7 @@ const sidebarUtils = require('../../../utils/sidebarUtils');
 const titles = ['C语言', '示例代码'];
 
 const childrenData = [
-    ['', 'conception', 'data-type', '优先级'],
+    ['', 'question', 'data-type', '优先级'],
     ['case/']
 ];
 
