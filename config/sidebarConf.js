@@ -11,6 +11,7 @@ const site = require('./sidebar/site/index');
 const internet = require('./sidebar/internet/index');
 const git = require('./sidebar/git/index');
 const dataStructure = require('./sidebar/data-structure/index');
+const c = require('./sidebar/c/index');
 const mydoc = require('./sidebar/mydoc/index');
 const docker = require('./sidebar/docker/index');
 const linux = require('./sidebar/linux/index');
@@ -31,14 +32,15 @@ module.exports = {
     '/internet/': internet,
     '/git/': git,
     '/data-structure/': dataStructure,
+    '/c/': c,
     '/mydoc/': mydoc,
     '/docker/': docker,
     '/linux/': linux,
     '/': [
         {
-            title:'首页',
-            path:'/',
-            collapsable:false
+            title: '首页',
+            path: '/',
+            collapsable: false
         },
         '/guide/'
     ]
