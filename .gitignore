@@ -6,7 +6,7 @@ node_modules/
 #*.bat
 #*.json
 *.lock
-
+package-lock.json
 ### config ###
 #config/
 
