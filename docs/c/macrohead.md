@@ -19,7 +19,84 @@ int main() {
     return 0;
 }
 ```
+### 作用域
+```c
+#include <stdio.h>
+#define A 2  // 作用域为 2到5行
 
+void f() { printf("%d\n", A); }
+
+#define A(a, b) a - b // 作用域为该行至程序末尾
+
+void g() { printf("%d", A(5, 2)); }
+
+int main() {
+    f(); // 输出 2
+    g(); // 输出 3
+    return 0;
+}
+```
+
+### undef
+
+```c
+#include <stdio.h>
+#define A 2
+#define B(a, b) a + b
+void g();
+void f() { printf("%d, %d\n", A, B(4, 1)); }
+#undef A
+#undef B
+int main() {
+
+    f();
+    // printf("%d, %d\n", A, B(4, 1));  ERROR undef 终止了宏的作用域
+    return 0;
+}
+void g() {
+    // 编译报错, undef 终止了宏的作用域
+    // printf("%d, %d\n", A, B(4, 1));
+}
+```
+```c
+#include <stdio.h>
+#undef AB
+#undef AB
+extern int a;
+extern int a;
+void f();
+void f();
+int main() {
+    return 0;
+}
+```
+可以多次终止同一个宏名的定义，即使宏名未定义
+
+可以多次扩展同一个全局变量的作用域，即使宏名未定义
+
+可以多次扩展同一个函数的作用域，即使函数未定义
+
+### 宏与函数重名
+```c
+#include <stdio.h>
+
+void F(int a) {
+    // 输出a的值
+    printf("%d", a);
+}
+#define F(a) F(a); printf("haha")
+#define G(a) G(a); printf("haha")
+// 将下面代码替换为 void G(int a); printf("haha") ERROR
+// void G(int a) {
+//     // 输出a的值
+//     printf("%d", a);
+// }
+int main() {
+    F(3); // 首先被执行的是预处理指令，将 F(3) 替换成 F(3) printf("%d", a); 输出3haha
+    //相当于调用 F(3) 函数 再输出
+    return 0;
+}
+```
 ## 条件编译
 
 ```c

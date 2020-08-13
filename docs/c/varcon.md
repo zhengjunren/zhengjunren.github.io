@@ -146,7 +146,25 @@ int main() {
     return 0;
 }
 ```
+## 自动变量
+```c
+#include <stdio.h>
 
+int main() {
+    // int a = 3; 默认情况下,a就是一个自动变量,所以auto可以不加
+    // auto 只能用于修饰局部变量
+    auto int a = 3;
+    for (int i = 0; i < 10000; i++)
+        ;
+    // register只能修饰局部变量，但该变量不一定会成为寄存器变量,还需要编译系统决定
+    register int j = 2;
+
+    return 0;
+}
+```
+
+## 寄存器变量
+[**在上面**](#自动变量)
 
 
 ## 常量

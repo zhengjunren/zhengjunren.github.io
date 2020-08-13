@@ -4,10 +4,11 @@ const titles = ['C语言', '真题', '示例代码'];
 
 const childrenData = [
     ['', 'operator', 'varcon',
-        'macrohead', 'prisca',
-        'switch', 'circulate',
-        'array', 'pointer',
-        '优先级', 'question'],
+        'macrohead', 'circulate',
+        'array', 'pointer', 'allocation',
+        'struct', 'switch', 'prisca',
+        'exsta', '优先级', 'question'
+    ],
     ['test/2000'],
     ['case/']
 ];
