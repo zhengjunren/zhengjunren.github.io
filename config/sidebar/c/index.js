@@ -1,13 +1,17 @@
 const sidebarUtils = require('../../../utils/sidebarUtils');
 
-const titles = ['C语言', '真题', '示例代码'];
+const titles = ['C语言', '补充', '真题', '示例代码'];
 
 const childrenData = [
     ['', 'operator', 'varcon',
         'macrohead', 'circulate',
         'array', 'pointer', 'allocation',
-        'struct', 'switch', 'prisca',
-        'exsta', '优先级', 'question'
+        'struct', 'file'
+    ],
+    [
+        'switch', 'prisca',
+        'exsta', '优先级',
+        'bitwise', 'question'
     ],
     ['test/2000'],
     ['case/']
