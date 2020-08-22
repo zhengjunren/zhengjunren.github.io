@@ -189,6 +189,92 @@ int main() {
     return 0;
 }
 ```
+
+### 字符数组长度
+```c
+#include <stdio.h>
+#include <string.h>
+
+int main() {
+    char test1[3] = {'a', 'b', 'c'}; // 数组长度为3
+    int len1 = strlen(test1);
+    printf("%d\n", len1);            // 输出的值不确定
+    char test2[4] = {'a', 'b', 'c'}; // 数组长度为4
+    int len2 = strlen(test2);
+    printf("%d\n", len2);                  // 输出3
+    char test3[4] = {'a', 'b', 'c', '\0'}; // 数组长度为4
+    int len3 = strlen(test3);
+    printf("%d\n", len3); // 输出3
+    return 0;
+}
+```
+
+### 字符串拼接函数
+char * strcat (char * destination, const char * source);
+
+strcat() 将把 source 连接到 destination 后面，并删除原来 destination 最后的结束标志`'\0'`。
+这意味着，destination 必须足够长，要能够同时容纳 destination 和 source，否则会越界（超出范围）。
+
+```c
+#include <stdio.h>
+#include <string.h>
+
+int main() {
+    char test1[5] = "abcd";
+    char test2[4] = "efg";
+    strcat(test1, test2);
+    puts(test1); // 输出的值不确定
+    char test3[20] = "abcd";
+    char test4[] = "efghijk";
+    strcat(test3, test4);
+    puts(test3); // 输出 abcdefghijk
+    return 0;
+}
+```
+
+### 字符串拷贝函数
+char * strcpy ( char * destination, const char * source );
+strcpy() 会把 source 中的字符串拷贝到 destination 中，字符串结束标志'\0'也一同拷贝
+
+```c
+#include <stdio.h>
+#include <string.h>
+
+int main() {
+    char test1[20] = "abcd";
+    char test2[] = "this is a test";
+    strcpy(test1, test2);
+    puts(test1);
+    return 0;
+}
+```
+将 test2 复制到 test1 后，test1 中原来的内容就被覆盖了。
+另外，strcpy() 要求 destination 要有足够的长度，否则不能全部装入所拷贝的字符串。
+
+### 字符串比较函数
+int strcmp ( const char * str1, const char * str2 );
+
+字符本身没有大小之分，strcmp() 以各个字符对应的 ASCII 码值进行比较。strcmp() 从两个字符串的第 0 个字符开始比较，如果它们相等，就继续比较下一个字符，直到遇见不同的字符，或者到字符串的末尾。
+
+返回值：若 str1 和 str2 相同，则返回0；若 str1 大于 str2，则返回大于 0 的值；若 str1 小于 str2，则返回小于0 的值。
+```c
+#include <stdio.h>
+#include <string.h>
+
+int main() {
+    // a 的 ASCII 码为 97
+    // A 的 ASCII 码为 65
+    char a[] = "aBcDeF";
+    char b[] = "AbCdEf";
+    char c[] = "aacdef";
+    char d[] = "aBcDeF";
+    printf("a VS b: %d\n", strcmp(a, b)); // 输出大于0的数
+    printf("a VS c: %d\n", strcmp(a, c)); // 输出小于0的数
+    printf("a VS d: %d\n", strcmp(a, d)); // 输出0
+    return 0;
+}
+```
+
 ### 字符串输入输出
 ```c
 #include <stdio.h>
