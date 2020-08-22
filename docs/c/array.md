@@ -191,6 +191,7 @@ int main() {
 ```
 
 ### 字符数组长度
+strlen() 函数从字符串的开头位置依次向后计数，直到遇见\0，然后返回计时器的值。最终统计的字符串长度不包括\0。
 ```c
 #include <stdio.h>
 #include <string.h>
@@ -245,11 +246,18 @@ int main() {
     char test2[] = "this is a test";
     strcpy(test1, test2);
     puts(test1);
+    char a[7] = "abcdef", b[4] = "ABC";
+    strcpy(a, b);
+    printf("%c\n", a[4]); // 输出e
+    puts(a); // 输出 ABC
     return 0;
 }
 ```
 将 test2 复制到 test1 后，test1 中原来的内容就被覆盖了。
-另外，strcpy() 要求 destination 要有足够的长度，否则不能全部装入所拷贝的字符串。
+另外，strcpy() 要求 destination 要有足够的长度，否则不能全部装入所拷贝的字符串。<br/>
+上面代码中，数组a在内存中初始化值为`'a' 'b' 'c' 'd' 'e' 'f' '\0` <br/>
+执行完 `strcpy(a, b);`后<br/>
+数组a在内存中：`'A' 'B' 'C' '\0' 'e' 'f' '\0'`
 
 ### 字符串比较函数
 int strcmp ( const char * str1, const char * str2 );
