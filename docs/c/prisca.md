@@ -14,6 +14,9 @@ int main() {
     printf("%7.lf\n", 12.345); // %7.0lf 和 %7.lf等价
     printf("%.5f\n", 12.345);
     printf("%-11lf\n", 12.345);
+    int a = 111, b = 10, c;
+    c = a % b;
+    printf("a=%d,b=%d", 1, 111, b); // 输出  a=1,b=111
     return 0;
 }
 ```

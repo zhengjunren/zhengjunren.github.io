@@ -25,3 +25,16 @@
 char test[] = "";
 // char a = '';   报错
 ```
++ `printf`函数的输出控制符比输出参数少时，按照参数顺序输出，如果控制符比参数多，则输出不确定的值
+
++ 下面代码中，s数组长度为 6、字符串长度为5；p数组长度为7，字符串长度为6
+```c
+#include <stdio.h>
+#include <string.h>
+
+int main() {
+    char s[] = "\ta\017bc"; // '\017'是一个字符
+    char p[] = "\ta\018bc"; // \018是两个字符 '\01' '8'
+    printf("%d %d", strlen(s), strlen(p)); // 输出 5 6
+}
+```
