@@ -131,3 +131,82 @@ int main() {
 ```
 
 ## 汉诺塔
+
+## 最长单词
+```c
+#include <stdio.h>
+#include <string.h>
+int alphabetic(char);
+int longest(char[]);
+int main() {
+    char line[100];
+    gets(line);
+    char *s;
+
+    int word_length = 0; // word_length 当前单词长度
+    int longest_len = 0; // 最长单词长度
+    int current = 0;     //指向单词开始的位置
+    s = line;
+    int len = strlen(line);
+    int i = 0;
+    // 若 i < len 则统计不到最后一个单词的长度
+    while (i <= len) {
+        //判断当前指针所指是否为字母
+        if (alphabetic(*s)) {
+            // 若为字母，则单词长度加一
+            word_length++;
+        } else {
+            // 若不是字母，说明单词已经结束
+            // 判断当前单词是否是最长的单词
+            if (word_length > longest_len) {
+                // 赋值给
+                longest_len = word_length;
+                // 最长单词的起始位置
+                current = i - word_length;
+            }
+            // 单词结束，单词长度重置
+            word_length = 0;
+        }
+        s++;
+        i++;
+    }
+
+    for (int j = 0; j < longest_len; j++) {
+        printf("%c", line[j + current]);
+    }
+
+    return 0;
+}
+int alphabetic(char a) {
+    if ((a >= 'a' && a <= 'z') || (a >= 'A' && a <= 'Z')) {
+        return 1;
+    }
+    return 0;
+}
+```
+
+## 字符数组排序
+```c
+#include <stdio.h>
+#include <string.h>
+void sort(char *s, int len);
+int main() {
+    char str[80];
+    gets(str);
+    int len = strlen(str);
+    sort(str, len);
+    puts(str);
+    return 0;
+}
+void sort(char s[], int len) {
+    for (int i = 0; i < len - 1; i++) {
+        for (int j = 0; j < len - 1 - i; j++) {
+            if (*(s + j) > *(s + j + 1)) {
+                char a = *(s + j + 1);
+                *(s + j + 1) = *(s + j);
+                *(s + j) = a;
+            }
+        }
+    }
+}
+```
