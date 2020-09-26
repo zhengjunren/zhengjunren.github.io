@@ -6,7 +6,7 @@ const childrenData = [
     ['', 'operator', 'varcon',
         'macrohead', 'circulate',
         'array', 'pointer', 'allocation',
-        'struct', 'file'
+        'struct', 'list', 'file'
     ],
     [
         'switch', 'prisca',
@@ -15,7 +15,7 @@ const childrenData = [
         'error-question-collections'
     ],
     ['test/2000', 'test/2007', 'test/2009'],
-    ['case/', 'case/case1']
+    ['case/', 'case/case1', 'case/case2']
 ];
 
 module.exports = sidebarUtils.simpleGenSidebar(titles, childrenData);
