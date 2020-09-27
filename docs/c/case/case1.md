@@ -1,4 +1,4 @@
-# 示例代码1
+# 另一些题目
 ## 查找与排序
 ```c
 #include <stdio.h>
@@ -76,7 +76,7 @@ int search(int num[], int employNum) {
     }
 }
 ```
-> 注意：字符数组的赋值用`strcpt`函数！！！！
+> 注意：字符数组的赋值用`strcpy`函数！！！！
 
 > 二分查找的循环条件是： high > mid && mid > low
 

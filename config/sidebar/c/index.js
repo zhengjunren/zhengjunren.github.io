@@ -15,7 +15,7 @@ const childrenData = [
         'error-question-collections'
     ],
     ['test/2000', 'test/2007', 'test/2009'],
-    ['case/', 'case/case1', 'case/case2']
+    ['case/', 'case/case1', 'case/case2', 'case/case3']
 ];
 
 module.exports = sidebarUtils.simpleGenSidebar(titles, childrenData);
