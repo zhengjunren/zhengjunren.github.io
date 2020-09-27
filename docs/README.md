@@ -1,7 +1,7 @@
 ---
 home: true
-heroImage: /hero.png
-heroText: 郑俊仁
+heroImage: /hero1.jpg
+heroText: 小郑
 tagline: JUST PLAYING AROUND
 actionText: 快速开始 →
 actionLink: /guide/
