@@ -15,9 +15,9 @@
 
 ### 联系方式
 
-- 手机：15070517468
+- 手机：150****7468
 - Email：zhengjr989@qq.com 
-- 微信号：w19981004
+- 微信号：zjr_nice
 
 
 ## 个人经历
@@ -30,7 +30,7 @@
 
 ## 个人作品
 ### 开源项目
- - [**blog-admin**](http://test.zhengjunren.cn)<Badge text="点击 blog-admin 预览"/>
+ - blog-admin
     - 一个基于 Spring Boot 2.2.4 、 Mybatis-plus、 JWT、Spring Security、Redis、Vue的前后端分离的后台管理系统
     - **技术栈**：**Springboot、Spring-Security**、MapStruct、mybatis-plus、quarz、**vue、axios、vue-element-admin、element-ui、docker**、elasticsearch、redis等。
      - **贡献**：前端模板为 vue-element-admin，后端自主开发。
