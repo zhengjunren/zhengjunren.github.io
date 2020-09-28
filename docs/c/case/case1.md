@@ -227,3 +227,67 @@ void sort(int **p) {
 }
 ```
 ![示意图](/c/sortwithpointer.png)
+
+## 查找文件内容
+输入字符串，在文件中查找该字符串，若找到，提示信息，若没有找到，则追加至文件中
+```c
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+void check(FILE *fp);
+int main() {
+    char str[80];
+    printf("输入字符串：");
+    gets(str);
+    int len = strlen(str);
+    int flag = 1;
+    int i = 0;
+    FILE *fp = fopen("G:/codeOfc/c/chapter10/test.txt", "r+");
+    check(fp);
+    char *res = (char *)malloc(sizeof(char) * len +1);
+    while (flag) {
+        fseek(fp, i*sizeof(char), SEEK_SET);
+//        fread(res, sizeof(char), len, fp);
+//        *(res + len) = '\0';
+        // 等同于上面两句
+        fgets(res, len + 1, fp);
+
+        int a = strcmp(res, str);
+        if (a == 0) {
+            flag = 0;
+            printf("找到了");
+        }
+        if (feof(fp)) {
+            flag = 0;
+            printf("没有找到，插入文件末尾");
+            // 将文件光标移至文件末尾
+            fseek(fp, 0, SEEK_END);
+            fputs(str, fp);
+        }
+        i++;
+    }
+    fclose(fp);
+    return 0;
+}
+
+void write() {
+    char str[80];
+    printf("输入字符串：");
+    gets(str);
+    FILE *fp = fopen("G:/codeOfc/c/chapter10/test.txt", "a+");
+    rewind(fp);
+    int i = 0;
+    while (*(str + i) != '\0') {
+        fputc(str[i], fp);
+        i++;
+    }
+    fclose(fp);
+}
+
+void check(FILE *fp) {
+    if (fp == NULL) {
+        printf("打开文件失败！程序退出！");
+        exit(-1);
+    }
+}
+```
