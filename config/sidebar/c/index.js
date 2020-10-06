@@ -14,7 +14,7 @@ const childrenData = [
         'bitwise', 'question',
         'error-question-collections'
     ],
-    ['test/2000', 'test/2007', 'test/2009'],
+    ['test/2000', 'test/2007', 'test/2009', 'test/2011'],
     ['case/', 'case/case1', 'case/case2', 'case/case3', 'case/case4']
 ];
 
