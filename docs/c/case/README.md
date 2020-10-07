@@ -184,6 +184,54 @@ int alphabetic(char a) {
     return 0;
 }
 ```
+## 删除字符串中所有空格
+```c
+#include <stdio.h>
+void delSpace(char *s) {
+    char *t = s;
+    char *letter, *space;
+    letter = space = s;
+    while (*s != '\0') {
+        if (*s == ' ') {
+            space = s;
+            letter++;
+            while (*letter == ' ') {
+                letter++;
+            }
+            *space = *letter;
+            if (*letter == '\0') {
+                break;
+            }
+            *letter = ' ';
+            s++;
+        } else {
+            letter++;
+            space++;
+            s++;
+        }
+    }
+}
+
+void fun(char *str) {
+    int i = 0;
+    char *p = str;
+    while (*p) {
+        if (*p != ' ') {
+            str[i] = *p;
+            i++;
+        }
+        p++;
+    }
+    str[i] = '\0';
+}
+
+int main() {
+    char s[] = "abc ef g";
+    fun(s);
+    printf("%s", s);
+    return 0;
+}
+```
 
 ## 字符数组排序
 ```c
