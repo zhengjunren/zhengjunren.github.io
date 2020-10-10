@@ -6,7 +6,7 @@ const childrenData = [
     ['', 'operator', 'varcon',
         'macrohead', 'circulate',
         'array', 'pointer', 'allocation',
-        'struct', 'list', 'file'
+        'struct', 'list', 'file', 'sort'
     ],
     [
         'switch', 'prisca',
