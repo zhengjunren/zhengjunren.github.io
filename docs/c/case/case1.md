@@ -291,3 +291,38 @@ void check(FILE *fp) {
     }
 }
 ```
+
+## 删除字符串前面的*
+规定输入字符串中只包含字母和*号。请编写函数fun，它的功能是：将函数字符串中的前导*号全部删除，中间和尾部的*号不删除。 
+```c
+#include <stdio.h>
+#include <string.h>
+void swap(char *s, int i, int j) {
+    char ch;
+    while (i < j) {
+        ch = *(s + j);
+        *(s + j) = *(s + i);
+        *(s + i) = ch;
+        i++;
+        j--;
+    }
+}
+
+void fun(char *s) {
+    int count = 0;
+    while (*(s + count) == '*') {
+        count++;
+    }
+    int len = strlen(s);
+    swap(s, count, len - 1);
+    swap(s, 0, len - 1);
+    s[len - count] = '\0';
+}
+
+int main() {
+    char s[] = "***a*bcd****";
+    fun(s);
+    puts(s);
+    return 0;
+}
+```

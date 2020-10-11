@@ -122,6 +122,83 @@ int main() {
 }
 ```
 
+```java
+package cn.zhengjunren.erp;
+
+import java.util.Arrays;
+
+/**
+ * <p>
+ * Description:
+ * </p>
+ *
+ * @author ZhengJunren
+ * @version v1.0.0
+ * @see cn.zhengjunren.erp
+ * @since 2020-10-11 13:07
+ */
+public class MergeSort {
+    public static void main(String[] args) {
+        int[] arr = {9, 5, 2, 7, 12, 3, 10, 5, 8};
+        Arrays.parallelSort(arr);
+        System.out.println(Arrays.toString(arr));
+        sort(arr);
+        System.out.println(Arrays.toString(arr));
+    }
+
+    public static void merge(int[] arr, int[] temp, int left, int mid, int right) {
+        int leftPosition = left;
+        int rightPosition = mid + 1;
+        int position = left;
+        while (leftPosition <= mid && rightPosition <= right) {
+            if (arr[leftPosition] < arr[rightPosition]) {
+                temp[position] = arr[leftPosition];
+                leftPosition++;
+            } else {
+                temp[position] = arr[rightPosition];
+                rightPosition++;
+            }
+            position++;
+        }
+        while (leftPosition <= mid) {
+            temp[position] = arr[leftPosition];
+            position++;
+            leftPosition++;
+        }
+        while (rightPosition <= right) {
+            temp[position] = arr[rightPosition];
+            position++;
+            rightPosition++;
+        }
+        while (left <= right) {
+            arr[left] = temp[left];
+            left++;
+        }
+    }
+
+    public static void mSort(int[] arr, int[] temp, int left, int right) {
+        if (left < right) {
+            // 将数组划分为左半区、右半区
+            int mid = (left + right) / 2;
+            // 递归划分左半区
+            mSort(arr, temp, left, mid);
+            // 递归划分右半区
+            mSort(arr, temp, mid + 1, right);
+            // 合并
+            merge(arr, temp, left, mid, right);
+        }
+    }
+
+    public static void sort(int[] arr) {
+        int length = arr.length;
+        int[] temp = new int[length];
+        mSort(arr, temp, 0, length - 1);
+    }
+
+}
+
+```
+
 ## 快速排序
 ```c
 #include <stdio.h>
