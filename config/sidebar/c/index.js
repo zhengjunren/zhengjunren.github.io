@@ -12,7 +12,7 @@ const childrenData = [
         'switch', 'prisca',
         'exsta', '优先级',
         'bitwise', 'question',
-        'error-question-collections'
+        'leet-code', 'error-question-collections'
     ],
     ['test/2000', 'test/2007', 'test/2009', 'test/2011'],
     ['case/', 'case/case1', 'case/case2', 'case/case3', 'case/case4']
