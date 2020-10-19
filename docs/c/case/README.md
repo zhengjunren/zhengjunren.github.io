@@ -129,6 +129,43 @@ int main() {
     return 0;
 }
 ```
+```c
+#include <stdio.h>
+#include <stdlib.h>
+void arr_print(int *a, int n) {
+    for (int i = 0; i < n; i++) {
+        printf("%d ", a[i]);
+    }
+}
+void fun() {
+    int **a = (int **)malloc(sizeof(int *) * 10);
+    int num[10];
+    for (int i = 0; i < 10; i++) {
+        *(a + i) = (int *)malloc(sizeof(int) * (i + 1));
+        num[i] = i + 1;
+    }
+    a[0][0] = 1;
+    a[1][0] = 1;
+    a[1][1] = 1;
+    int j = 0;
+    for (int i = 2; i < 10; i++) {
+        a[i][0] = 1;
+        a[i][i] = 1;
+        for (j = 1; j < i; j++) {
+            a[i][j] = a[i - 1][j] + a[i - 1][j - 1];
+        }
+    }
+    for (int i = 0; i < 10; i++) {
+        arr_print(*(a + i), i + 1);
+        printf("\n");
+    }
+}
+
+int main() {
+    fun();
+    return 0;
+}
+```
 
 ## 汉诺塔
 
