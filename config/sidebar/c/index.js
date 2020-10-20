@@ -15,7 +15,7 @@ const childrenData = [
         'leet-code', 'error-question-collections'
     ],
     ['test/2000', 'test/2007', 'test/2009', 'test/2011'],
-    ['case/', 'case/case1', 'case/case2', 'case/case3', 'case/case4']
+    ['case/', 'case/case1', 'case/list1', 'case/list2', 'case/file1', 'case/file2']
 ];
 
 module.exports = sidebarUtils.simpleGenSidebar(titles, childrenData);

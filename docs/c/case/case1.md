@@ -326,3 +326,37 @@ int main() {
     return 0;
 }
 ```
+
+## 字符串中子串出现的次数
+```c
+#include <stdio.h>
+#include <string.h>
+
+void f(char *s1, char *s2) {
+    int len2 = strlen(s2);
+    int i = 0, count = 0;
+    while (*s1 != '\0') {
+        i = 0;
+        while (*s1 == s2[i] && s2[i] != '\0') {
+            i++;
+            s1++;
+        }
+        s1++;
+        if (i == len2) {
+            count++;
+        }
+    }
+
+    printf("%d", count);
+}
+
+int main() {
+    char str1[20], str2[20];
+    printf("输入字符串1：");
+    scanf("%s", str1);
+    printf("输入字符串2");
+    scanf("%s", str2);
+    f(str1, str2);
+    return 0;
+}
+```

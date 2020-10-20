@@ -1,4 +1,4 @@
-## 使用链表
+## 使用链表1
 ```c
 #include <stdio.h>
 #include <stdlib.h>
