@@ -81,9 +81,139 @@ bool isValid(char * s){
     }
 }
 ```
-## 最小覆盖子串
-给你一个字符串 S、一个字符串 T 。请你设计一种算法，可以在 O(n) 的时间复杂度内，从字符串 S 里面找出：包含 T 所有字符的最小子串。
-示例：
+## 合并两个有序链表
+```java
+//将两个升序链表合并为一个新的 升序 链表并返回。新链表是通过拼接给定的两个链表的所有节点组成的。
+// 示例：
+// 输入：1->2->4, 1->3->4
+//输出：1->1->2->3->4->4
+package leetcode.editor.cn;
 
-输入：S = "ADOBECODEBANC", T = "ABC"
-输出："BANC"
+@SuppressWarnings("all")
+public class MergeTwoSortedLists {
+    public static void main(String[] args) {
+        Solution solution = new MergeTwoSortedLists().new Solution();
+        ListNode listNode = new ListNode(1, new ListNode(3,new ListNode(4, null)));
+        ListNode listNode1 = new ListNode(1, new ListNode(2,new ListNode(4, null)));
+        ListNode listNode2 = solution.mergeTwoLists(listNode1, listNode);
+        System.out.println(1);
+    }
+    public static class ListNode {
+        int val;
+        ListNode next;
+
+        ListNode() {
+        }
+
+        ListNode(int val) {
+            this.val = val;
+        }
+
+        ListNode(int val, ListNode next) {
+            this.val = val;
+            this.next = next;
+        }
+    }
+
+    class Solution {
+        public ListNode mergeTwoLists(ListNode l1, ListNode l2) {
+            ListNode head = new ListNode(0);
+            ListNode t = head;
+            while (l1 != null && l2 != null) {
+                if (l1.val < l2.val) {
+                    t.next = l1;
+                    t = t.next;
+                    l1 = l1.next;
+                }
+                else {
+                    t.next = l2;
+                    t = t.next;
+                    l2 = l2.next;
+                }
+            }
+            // 任一为空，直接连接另一条链表
+            if (l1 == null) {
+                t.next = l2;
+            }
+            else {
+                t.next = l1;
+            }
+
+            return head.next;
+        }
+    }
+}
+
+```
+
+## 有效的括号
+```java
+//给定一个只包括 '('，')'，'{'，'}'，'['，']' 的字符串，判断字符串是否有效。
+//
+// 有效字符串需满足：
+//
+//
+// 左括号必须用相同类型的右括号闭合。
+// 左括号必须以正确的顺序闭合。
+//
+//
+// 注意空字符串可被认为是有效字符串。
+//
+// 示例 1:
+// 输入: "()[]{}"
+//输出: true
+// 示例 3:
+// 输入: "(]"
+//输出: false
+// 示例 4:
+// 输入: "([)]"
+//输出: false
+// {()}}{
+
+
+package leetcode.editor.cn;
+
+import java.util.Stack;
+
+@SuppressWarnings("all")
+public class ValidParentheses {
+    public static void main(String[] args) {
+        Solution solution = new ValidParentheses().new Solution();
+        System.out.println(solution.isValid("(){}}{"));
+    }
+    class Solution {
+        public boolean isValid(String s) {
+            char[] chars = s.toCharArray();
+            Stack<Character> stack = new Stack<>();
+            int i = 0;
+            while (i < chars.length) {
+                if (stack.isEmpty() && (chars[i] == '}' || chars[i] == ']' || chars[i] == ')')) {
+                    return false;
+                }
+                if (chars[i] != '}' && chars[i] != ']' && chars[i] != ')') {
+                    stack.push(chars[i]);
+                } else if (chars[i] == ')') {
+                    if (!(stack.peek() == '(')) {
+                        return false;
+                    }
+                    stack.pop();
+                } else if (chars[i] == ']') {
+                    if (!(stack.peek() == '[')) {
+                        return false;
+                    }
+                    stack.pop();
+                } else if (chars[i] == '}') {
+                    if (!(stack.peek() == '{')) {
+                        return false;
+                    }
+                    stack.pop();
+                }
+                i++;
+
+            }
+            return stack.isEmpty();
+
+        }
+    }
+}
+```
