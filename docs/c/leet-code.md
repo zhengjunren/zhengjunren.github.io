@@ -1,11 +1,9 @@
 # 刷题！
 ## 检查替换后的词是否有效
-给定有效字符串 "abc"。
-
-对于任何有效的字符串 V，我们可以将 V 分成两个部分 X 和 Y，使得 X + Y（X 与 Y 连接）等于 V。（X 或 Y 可以为空。）那么，X + "abc" + Y 也同样是有效的。
-
-例如，如果 S = "abc"，则有效字符串的示例是："abc"，"aabcbc"，"abcabc"，"abcabcababcc"。无效字符串的示例是："abccba"，"ab"，"cababc"，"bac"。
-
+给定有效字符串 "abc"。<br/>
+对于任何有效的字符串 V，我们可以将 V 分成两个部分 X 和 Y，使得 X + Y（X 与 Y 连接）等于 V。（X 或 Y 可以为空。）那么，X + "abc" + Y 也同样是有效的。<br/>
+例如，如果 S = "abc"，则有效字符串的示例是："abc"，"aabcbc"，"abcabc"，"abcabcababcc"。<br/>
+无效字符串的示例是："abccba"，"ab"，"cababc"，"bac"。<br/>
 如果给定字符串 S 有效，则返回 true；否则，返回 false。
 
 ```c
@@ -147,30 +145,16 @@ public class MergeTwoSortedLists {
 ```
 
 ## 有效的括号
+给定一个只包括 '('，')'，'{'，'}'，'['，']' 的字符串，判断字符串是否有效。<br/>
+有效字符串需满足：左括号必须用相同类型的右括号闭合。左括号必须以正确的顺序闭合。<br/>
+注意空字符串可被认为是有效字符串。<br/>
+示例 1:<br/>
+输入: "()[]{}"<br/>
+输出: true<br/>
+示例 2:<br/>
+输入: "{()}}{"<br/>
+输出: false
 ```java
-//给定一个只包括 '('，')'，'{'，'}'，'['，']' 的字符串，判断字符串是否有效。
-//
-// 有效字符串需满足：
-//
-//
-// 左括号必须用相同类型的右括号闭合。
-// 左括号必须以正确的顺序闭合。
-//
-//
-// 注意空字符串可被认为是有效字符串。
-//
-// 示例 1:
-// 输入: "()[]{}"
-//输出: true
-// 示例 3:
-// 输入: "(]"
-//输出: false
-// 示例 4:
-// 输入: "([)]"
-//输出: false
-// {()}}{
-
-
 package leetcode.editor.cn;
 
 import java.util.Stack;
@@ -216,4 +200,89 @@ public class ValidParentheses {
         }
     }
 }
+```
+
+## 最大子序列和
+给定一个整数数组nums,找到一个具有最大和的连续子数组(子数组最少包含一个元素),返回其最大和<br/>
+输入: [-2,1,-3,4,-1,2,1,-5,4] <br/>
+输出: 6<br/>
+解释: 连续子数组 [4,-1,2,1] 的和最大，为 6。
+```java
+package leetcode.editor.cn;
+
+@SuppressWarnings("all")
+public class MaximumSubarray {
+    public static void main(String[] args) {
+        Solution solution = new MaximumSubarray().new Solution();
+        int[] nums = {-2, 1, -3, 4, -1, 2, 1, -5, 4};
+        solution.maxSubArray(nums);
+    }
+    class Solution {
+        public int maxSubArray(int[] nums) {
+            int maxSum = nums[0];
+            int[] dp = new int[nums.length];
+            dp[0] = maxSum;
+            for (int i = 1; i < nums.length; i++) {
+                if (dp[i-1] > 0) {
+                    dp[i] = dp[i - 1] + nums[i];
+                }else {
+                    dp[i] = nums[i];
+                }
+                if (dp[i] > maxSum) {
+                    maxSum = dp[i];
+                }
+            }
+            return maxSum;
+        }
+    }
+}
+```
+
+## 加一
+给定一个由整数组成的非空数组所表示的非负整数，在该数的基础上加一。<br/>
+最高位数字存放在数组的首位， 数组中每个元素只存储单个数字。<br/>
+你可以假设除了整数 0 之外，这个整数不会以零开头。<br/>
+输入: [1,2,3]<br/>
+输出: [1,2,4]<br/>
+解释: 输入数组表示数字 123。<br/>
+输入: [1,9,9]<br/>
+输出: [2,0,0]<br/>
+解释: 输入数组表示数字 199。
+```java
+package leetcode.editor.cn;
+
+import java.util.Arrays;
+
+@SuppressWarnings("all")
+public class PlusOne {
+    public static void main(String[] args) {
+        Solution solution = new PlusOne().new Solution();
+        int[] nums = {1, 9, 9};
+        System.out.println(Arrays.toString(solution.plusOne(nums)));
+    }
+    class Solution {
+        public int[] plusOne(int[] digits) {
+            int i = digits.length - 1;
+            int carry = 0;
+            // 判断末位是否为 9，如果为 9 改成 0
+            // 此时 i 往前移动，直至digits[i]不为 9 
+            // 并且要进位
+            while (i >= 0 && digits[i] == 9) {
+                digits[i] = 0;
+                i--;
+                carry = 1;
+            }
+            // 判断第一位是否为 0 和是否要进位
+            // 判断是否要进位是验证输入的数组为 {0}
+            if (carry == 1 && digits[0] == 0) {
+                int[] nums = new int[digits.length + 1];
+                nums[0] = 1;
+                return nums;
+            }
+            digits[i] = digits[i] + 1;
+            return digits;
+        }
+    }
+}
+
 ```
