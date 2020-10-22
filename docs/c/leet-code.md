@@ -286,3 +286,207 @@ public class PlusOne {
 }
 
 ```
+
+## 二进制加法
+给你两个二进制字符串，返回它们的和（用二进制表示）。<br/>
+输入为 非空 字符串且只包含数字 1 和 0。<br/>
+示例 1:<br/>
+输入: a = "11", b = "1"<br/>
+输出: "100"<br/>
+示例 2:<br/>
+输入: a = "1010", b = "1011"<br/>
+输出: "10101"<br/>
+解法1
+```java
+package leetcode.editor.cn;
+
+@SuppressWarnings("all")
+public class AddBinary {
+    public static void main(String[] args) {
+        Solution solution = new AddBinary().new Solution();
+        System.out.println(solution.addBinary("1010", "1011"));
+    }
+    class Solution {
+        public String addBinary(String a, String b) {
+            char[] max;
+            char[] min;
+            if (a.length() > b.length()) {
+                max = a.toCharArray();
+                min = b.toCharArray();
+            }else {
+                max = b.toCharArray();
+                min = a.toCharArray();
+            }
+            int i = min.length - 1;
+            int j = max.length - 1;
+            int carry = 0;
+            while (j >= 0) {
+                char x = i < 0 ? '0' : min[i];
+                char y = max[j];
+                if (x == '1' && y == '1') {
+                    if (carry == 1) {
+                        max[j] = '1';
+                    }
+                    else {
+                        max[j] = '0';
+                    }
+                    carry = 1;
+                } else if (x == '1' || y == '1') {
+                    if (carry == 1) {
+                        max[j] = '0';
+                        carry = 1;
+                    }else {
+                        max[j] = '1';
+                        carry = 0;
+                    }
+                }else {
+                    if (carry == 1) {
+                        max[j] = '1';
+                    }
+                    else {
+                        max[j] = '0';
+                    }
+                    carry = 0;
+                }
+                j--;
+                i--;
+            }
+            if (carry == 1) {
+                char[] res = new char[max.length + 1];
+                res[0] = '1';
+                for (int k = 0; k < max.length; k++) {
+                    res[k + 1] = max[k];
+                }
+                return new String(res);
+            }
+            else {
+
+                return new String(max);
+            }
+
+        }
+    }
+}
+```
+解法2
+```c
+#include <stdio.h>
+#include <string.h>
+#include "stdlib.h"
+char * addBinary(char * a, char * b);
+int main() {
+    puts(addBinary("11", "1"));
+    return 0;
+}
+char * addBinary(char * a, char * b){
+    int len1 = strlen(a), len2 = strlen(b), maxLen, minLen;
+    char *max, *min;
+    if(len1 > len2) {
+        maxLen = len1;
+        minLen = len2;
+        max = a;
+        min = b;
+    }
+    else{
+        maxLen = len2;
+        minLen = len1;
+        max = b;
+        min = a;
+    }
+    int i = maxLen - 1;
+    int j = minLen - 1;
+    int carry = 0;
+    int sum;
+    char *res = (char *)malloc(maxLen + 2);
+    // 防止溢出
+    res[maxLen + 1] = '\0';
+    while(i >= 0) {
+        int x = max[i] - '0';
+        int y = j < 0 ? 0 : min[j] - '0';
+        sum =  (x + y + carry) % 2;
+        carry = (x + y + carry) >= 2 ? 1 : 0;
+        res[i + 1] = sum + '0';
+        i--;
+        j--;
+    }
+    if(carry == 1) {
+        res[0] = '1';
+        return res;
+    }
+    else {
+        return res+1;
+    }
+
+}
+```
+
+## 爬楼梯
+假设你正在爬楼梯。需要 n 阶你才能到达楼顶。每次你可以爬 1 或 2 个台阶。你有多少种不同的方法可以爬到楼顶呢？
+注意：给定 n 是一个正整数。<br/>
+示例 1：<br/>
+输入： 2<br/>
+输出： 2<br/>
+解释： 有两种方法可以爬到楼顶。<br/>
+1、1 阶 + 1 阶<br/>
+2、2 阶<br/>
+示例 2：<br/>
+输入： 3<br/>
+输出： 3<br/>
+解释： 有三种方法可以爬到楼顶。<br/>
+1、1 阶 + 1 阶 + 1 阶<br/>
+2、1 阶 + 2 阶<br/>
+3、2 阶 + 1 阶<br/>
+
+## 删除有序链表中的重复元素
+给定一个排序链表，删除所有重复的元素，使得每个元素只出现一次。<br/>
+示例 1:<br/>
+输入: 1->1->2<br/>
+输出: 1->2<br/>
+示例 2:<br/>
+输入: 1->1->2->3->3<br/>
+输出: 1->2->3<br/>
+```java
+package leetcode.editor.cn;
+
+@SuppressWarnings("all")
+public class RemoveDuplicatesFromSortedList {
+    public static void main(String[] args) {
+        Solution solution = new RemoveDuplicatesFromSortedList().new Solution();
+        ListNode listNode = new ListNode(1, new ListNode(1, new ListNode(2, new ListNode(3,new ListNode(3, null)))));
+        solution.deleteDuplicates(listNode);
+    }
+    public static class ListNode {
+        int val;
+        ListNode next;
+
+        ListNode(int x) {
+            val = x;
+        }
+        ListNode(int x, ListNode listNode) {
+            val = x;
+            next = listNode;
+        }
+    }
+    class Solution {
+        public ListNode deleteDuplicates(ListNode head) {
+            if(head == null) {
+                return head;
+            }
+            ListNode slow = head;
+            ListNode fast = head.next;
+            while (slow != null) {
+                if (fast == null) {
+                    slow.next = fast;
+                    break;
+                }
+                if (slow.val != fast.val) {
+                    slow.next = fast;
+                    slow = slow.next;
+                }
+                fast = fast.next;
+            }
+            return head;
+        }
+    }
+}
+```
