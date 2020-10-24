@@ -490,3 +490,103 @@ public class RemoveDuplicatesFromSortedList {
     }
 }
 ```
+
+## 两数之和II-输入有序数组
+给定一个已按照升序排列 的有序数组，找到两个数使得它们相加之和等于目标数。
+函数应该返回这两个下标值 index1 和 index2，其中 index1 必须小于 index2。
+说明:<br/>
+返回的下标值（index1 和 index2）不是从零开始的。
+你可以假设每个输入只对应唯一的答案，而且你不可以重复使用相同的元素。
+示例:<br/>
+输入: numbers = [2, 7, 11, 15], target = 9<br/>
+输出: [1,2]<br/>
+解释: 2 与 7 之和等于目标数 9 。因此 index1 = 1, index2 = 2 。
+```java
+package leetcode.editor.cn;
+
+import java.util.Arrays;
+
+@SuppressWarnings("all")
+public class TwoSumIiInputArrayIsSorted {
+    public static void main(String[] args) {
+        Solution solution = new TwoSumIiInputArrayIsSorted().new Solution();
+        int[] numbers = {-1, 0};
+        System.out.println(Arrays.toString(solution.twoSum(numbers, -1)));
+    }
+    class Solution {
+        public int[] twoSum(int[] numbers, int target) {
+            int j = numbers.length - 1;
+            int i = 0;
+            while (i < j) {
+                // 如果两数之和大于目标值，将右标左移，将和变小
+                if (numbers[i] + numbers[j] > target) {
+                    j--;
+                }
+                // 如果两数之和小于目标值，将左标右移，将和变大
+                else if (numbers[i] + numbers[j] < target) {
+                    i++;
+                }
+                else {
+                    return new int[] {i+1, j+1};
+                }
+            }
+            return new int[] {-1, -1};
+        }
+    }
+}
+
+```
+
+## 多数元素
+给定一个大小为 n 的数组，找到其中的多数元素。多数元素是指在数组中出现次数大于 ⌊ n/2 ⌋ 的元素。
+你可以假设数组是非空的，并且给定的数组总是存在多数元素。
+示例 1:<br/>
+输入: [3,2,3]<br/>
+输出: 3<br/>
+示例 2:<br/>
+输入: [2,2,1,1,1,2,2]<br/>
+输出: 2
+```java 
+package leetcode.editor.cn;
+
+@SuppressWarnings("all")
+public class MajorityElement {
+    public static void main(String[] args) {
+        Solution solution = new MajorityElement().new Solution();
+
+    }
+    class Solution {
+        public int majorityElement(int[] nums) {
+            int count = 1;
+            int a = nums[0];
+            for (int i = 1; i < nums.length; i++) {
+                if (a == nums[i]) {
+                    count++;
+                }else {
+                    count--;
+                }
+                if (count == 0) {
+                    a = nums[i];
+                    count = 1;
+                }
+            }
+            return a;
+        }
+    }
+}
+```
+候选人(cand_num)初始化为nums[0]，票数count初始化为1。<br/>
+当遇到与cand_num相同的数，则票数count = count + 1，否则票数count = count - 1。<br/>
+当票数count为0时，更换候选人，并将票数count重置为1。<br/>
+遍历完数组后，cand_num即为最终答案。<br/>
+为何这行得通呢？<br/>
+投票法是遇到相同的则票数 + 1，遇到不同的则票数 - 1。<br/>
+且“多数元素”的个数> ⌊ n/2 ⌋，其余元素的个数总和<= ⌊ n/2 ⌋。<br/>
+因此“多数元素”的个数 - 其余元素的个数总和 的结果 肯定 >= 1。<br/>
+这就相当于每个“多数元素”和其他元素 两两相互抵消，抵消到最后肯定还剩余至少1个“多数元素”。<br/>
+无论数组是1 2 1 2 1，亦或是1 2 2 1 1，总能得到正确的候选人。<br/>
+:::tip
+玩一个诸侯争霸的游戏，假设你方人口超过总人口一半以上，并且能保证每个人口出去干仗都能一对一同归于尽。最后还有人活下来的国家就是胜利。
+那就大混战呗，最差所有人都联合起来对付你（对应你每次选择作为计数器的数都是众数），或者其他国家也会相互攻击（会选择其他数作为计数器的数），但是只要你们不要内斗，最后肯定你赢。
+最后能剩下的必定是自己人。
+:::
