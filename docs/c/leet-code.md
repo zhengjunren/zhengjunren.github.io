@@ -590,3 +590,97 @@ public class MajorityElement {
 那就大混战呗，最差所有人都联合起来对付你（对应你每次选择作为计数器的数都是众数），或者其他国家也会相互攻击（会选择其他数作为计数器的数），但是只要你们不要内斗，最后肯定你赢。
 最后能剩下的必定是自己人。
 :::
+
+## 快乐数
+编写一个算法来判断一个数 n 是不是快乐数。<br/>
+「快乐数」定义为：对于一个正整数，每一次将该数替换为它每个位置上的数字的平方和，然后重复这个过程直到这个数变为 1，也可能是 无限循环 但始终变不到 1。如果 可以变为  1，那么这个数就是快乐数。<br/>
+如果 n 是快乐数就返回 True ；不是，则返回 False 。<br/>
+示例：<br/>
+输入：19<br/>
+输出：true<br/>
+解释：<br/>
+1^2 + 9^2 = 82<br/>
+8^2 + 2^2 = 68<br/>
+6^2 + 8^2 = 100<br/>
+1^2 + 0^2 + 0^2 = 1<br/>
+```java
+package leetcode.editor.cn;
+
+@SuppressWarnings("all")
+public class HappyNumber {
+    public static void main(String[] args) {
+        Solution solution = new HappyNumber().new Solution();
+        solution.isHappy(19);
+    }
+    class Solution {
+        int trans(int n) {
+            int res = 0;
+            int num = 0;
+            while (n != 0) {
+                num = n % 10;
+                res += num * num;
+                n /= 10;
+            }
+            return res;
+        }
+        public boolean isHappy(int n) {
+            int slow = trans(n), fast = trans(trans(n));
+            while (slow != fast) {
+                slow = trans(slow);
+                fast = trans(trans(fast));
+            }
+            return slow == 1;
+        }
+    }
+}
+
+```
+
+## 找到所有数组中消失的数字
+给定一个范围在  1 ≤ a[i] ≤ n ( n = 数组大小 ) 的 整型数组，数组中的元素一些出现了两次，另一些只出现一次。
+找到所有在 [1, n] 范围之间没有出现在数组中的数字。<br/>
+示例:<br/>
+输入:<br/>
+[4,3,2,7,8,2,3,1]<br/>
+输出:<br/>
+[5,6]<br/>
+```java
+package leetcode.editor.cn;
+
+import java.util.ArrayList;
+import java.util.List;
+
+@SuppressWarnings("all")
+public class FindAllNumbersDisappearedInAnArray {
+    public static void main(String[] args) {
+        Solution solution = new FindAllNumbersDisappearedInAnArray().new Solution();
+        int[] nums = {4, 3, 2, 7, 8, 2, 3, 1};
+        solution.findDisappearedNumbers(nums);
+    }
+    class Solution {
+        public List<Integer> findDisappearedNumbers(int[] nums) {
+            //用来存放结果
+            List<Integer> res = new ArrayList<>();
+            //1. 遍历下数组的元素，对对应的索引位置的元素作标记
+            int len = nums.length;
+            for (int i = 0; i < len; i++) {
+                //由于数组的元素有可能被*-1，所以取绝对值
+                int num = Math.abs(nums[i]);  
+                int index = num - 1;
+                if (nums[index] > 0) {
+                    nums[index] *= -1;
+                }
+            }
+            // 寻找没有标记的索引位置
+            for (int i = 0; i < len; i++) {
+                if (nums[i] > 0) {
+                    //将索引转化为对应的元素
+                    int num = i + 1;  
+                    res.add(num);
+                }
+            }
+            return res;
+        }
+    }
+}
+```
