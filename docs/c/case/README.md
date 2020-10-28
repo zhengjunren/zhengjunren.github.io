@@ -221,6 +221,45 @@ int alphabetic(char a) {
     return 0;
 }
 ```
+
+### 改进版
+```c
+#include <stdio.h>
+
+
+int alphabetic(char a) {
+    if ((a >= 'a' && a <= 'z') || (a >= 'A' && a <= 'Z')) {
+        return 1;
+    }
+    return 0;
+}
+
+void getLongestWord(char *str, int len) {
+    int slow = 0, fast = 0, maxWordLen = 0, wordLen = 0;
+    int maxIndex = 0;
+    while (fast < len) {
+        while (fast < len && alphabetic(str[fast])) {
+            wordLen++;
+            fast++;
+        }
+        if (wordLen > maxWordLen) {
+            maxIndex = fast - wordLen;
+            maxWordLen = wordLen;
+        }
+        fast++;
+        wordLen = 0;
+    }
+    for (int i = 0; i < maxWordLen; i++) {
+        putchar(*(str + maxIndex + i));
+    }
+}
+
+int main() {
+    char str[] = "my address is shanggao";
+    getLongestWord(str, 22);
+    return 0;
+}
+```
 ## 删除字符串中所有空格
 ```c
 #include <stdio.h>

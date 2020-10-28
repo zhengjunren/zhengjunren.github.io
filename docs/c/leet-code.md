@@ -684,3 +684,115 @@ public class FindAllNumbersDisappearedInAnArray {
     }
 }
 ```
+
+## 最长回文串
+给定一个包含大写字母和小写字母的字符串，找到通过这些字母构造成的最长的回文串。
+在构造过程中，请注意区分大小写。比如 "Aa" 不能当做一个回文字符串。<br/>
+注意:<br/>
+假设字符串的长度不会超过 1010。<br/>
+示例 1:<br/>
+输入:<br/>
+"abccccdd"<br/>
+输出:<br/>
+7<br/>
+解释:<br/>
+我们可以构造的最长的回文串是"dccaccd", 它的长度是 7。<br/>
+```java
+package leetcode.editor.cn;
+
+@SuppressWarnings("all")
+public class LongestPalindrome {
+    public static void main(String[] args) {
+        Solution solution = new LongestPalindrome().new Solution();
+        System.out.println(solution.longestPalindrome("abccccdd"));
+    }
+    class Solution {
+        public int longestPalindrome(String s) {
+            char[] chars = s.toCharArray();
+            int[] hash = new int[52];
+            for (int i = 0; i < chars.length; i++) {
+                if (chars[i] >= 'a' && chars[i] <= 'z') {
+                    hash[chars[i] - 'a']++;
+                } else {
+                    hash[chars[i] - 'A' + 26]++;
+                }
+            }
+            int len = 0;
+            for (int i = 0; i < 52; i++) {
+                len = len + hash[i] - (hash[i] & 1);
+            }
+            return len == chars.length ? len : len + 1;
+        }
+    }
+}
+```
+（x & 1）的结果要么为0，要么为1——取决于x的二进制数的最后一位是0还是1； 2 奇数的二进制数最后一位总是1，偶数的二进制数最后一位总是0； 所以,如果x为偶数，(x & 1)就为0； 如果x为奇数， （x & 1）就为1； --- x表示某个字符出现次数的计数器； 如果某个字符在原始字符串中出现了偶数次，那么这x个字符都可以用来组成回文字符串； 如果出现了奇数次，那就需要去掉其中一个字符，才能保证剩下的字符都可以用来组成回文字符串；
+
+最终，回文字符串的长度 ans += x & (x-1);
+
+## 压缩数组
+给定一组字符，使用原地算法将其压缩。压缩后的长度必须始终小于或等于原数组长度。数组的每个元素应该是长度为1 的字符（不是 int 整数类型）。<br/>
+在完成原地修改输入数组后，返回数组的新长度。<br/>
+示例 1：<br/>
+输入：<br/>
+["a","a","b","b","c","c","c"]<br/>
+输出：<br/>
+返回 6 ，输入数组的前 6 个字符应该是：["a","2","b","2","c","3"]<br/>
+说明：<br/>
+"aa" 被 "a2" 替代。"bb" 被 "b2" 替代。"ccc" 被 "c3" 替代。<br/>
+示例 2：<br/>
+输入：<br/>
+["a","b","b","b","b","b","b","b","b","b","b","b","b"]<br/>
+输出：<br/>
+返回 4 ，输入数组的前4个字符应该是：["a","b","1","2"]。<br/>
+解释：<br/>
+由于字符 "a" 不重复，所以不会被压缩。"bbbbbbbbbbbb" 被 “b12” 替代。<br/>
+注意每个数字在数组中都有它自己的位置。
+```java
+package leetcode.editor.cn;
+
+@SuppressWarnings("all")
+public class StringCompression {
+    public static void main(String[] args) {
+        Solution solution = new StringCompression().new Solution();
+
+        char[] chars = "abc".toCharArray();
+        int len = solution.compress(chars);
+        for (int i = 0; i < len; i++) {
+            System.out.print(chars[i] + " ");
+        }
+    }
+
+    class Solution {
+        public int compress(char[] chars) {
+            if (chars.length == 1) {
+                return 1;
+            }
+            int slow = 0;
+            int fast = 0;
+            char ch = chars[slow];
+            int len = 0;
+            while (fast < chars.length) {
+                while (fast < chars.length && chars[fast] == ch) {
+                    fast++;
+                    len++;
+                }
+                chars[slow++] = ch;
+                if (len > 1) {
+                    char[] num = String.valueOf(len).toCharArray();
+                    for (int i = 0; i < num.length; i++) {
+                        chars[slow++] = num[i];
+                    }
+                }
+
+                len = 0;
+                if (fast < chars.length) {
+                    ch = chars[fast];
+                }
+            }
+            return slow;
+        }
+    }
+}
+
+```
