@@ -796,3 +796,30 @@ public class StringCompression {
 }
 
 ```
+
+## 不用加号的加法
+设计一个函数把两个数字相加。不得使用 + 或者其他算术运算符。<br/>
+示例:<br/>
+输入: a = 1, b = 1<br/>
+输出: 2<br/>
+```java
+package leetcode.editor.cn;
+
+@SuppressWarnings("all")
+public class AddWithoutPlusLcci {
+    public static void main(String[] args) {
+        Solution solution = new AddWithoutPlusLcci().new Solution();
+        System.out.println(solution.add(3, 3));
+    }
+    class Solution {
+        public int add(int a, int b) {
+            while (b != 0) {
+                int temp = a;
+                a = (a ^ b);
+                b = ((temp & b) << 1);
+            }
+            return a;
+        }
+    }
+}
+```
