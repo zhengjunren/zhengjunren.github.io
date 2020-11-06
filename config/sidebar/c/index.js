@@ -11,6 +11,7 @@ const childrenData = [
     [
         'switch', 'prisca',
         'exsta', '优先级',
+        'common-function',
         'bitwise', 'question',
         'leet-code', 'error-question-collections'
     ],
