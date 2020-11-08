@@ -125,3 +125,81 @@ int main() {
     return 0;
 }
 ```
+
+## 常见函数的返回值
+
+```c
+#define NULL ((void *)0)
+#define SEEK_CUR 1
+#define SEEK_END 2
+#define SEEK_SET 0
+#define EOF (-1)
+```
+
+### fclose()
+int fclose(FILE *stream)
+
+如果流成功关闭，则该方法返回零。如果失败，则返回 EOF(即-1)。
+
+### feof()
+int feof(FILE *stream)
+
+当设置了与流关联的文件结束标识符时，该函数返回一个非零值，否则返回零。
+
+### fopen()
+FILE *fopen(const char *filename, const char *mode)
+
+该函数返回一个 FILE 指针。否则返回 NULL，且设置全局变量 errno 来标识错误。
+
+### fread()
+size_t fread(void *ptr, size_t size, size_t nmemb, FILE *stream)
+
+成功读取的元素总数会以 size_t 对象返回，size_t 对象是一个整型数据类型。如果总数与 nmemb 参数不同，则可能发生了一个错误或者到达了文件末尾。
+
+### fseek() 
+int fseek(FILE *stream, long int offset, int whence)
+
+如果成功，则该函数返回零，否则返回非零值。
+
+### ftell()
+long int ftell(FILE *stream)
+
+该函数返回位置标识符的当前值。如果发生错误，则返回 -1L，全局变量 errno 被设置为一个正值。
+
+### fwrite()
+size_t fwrite(const void *ptr, size_t size, size_t nmemb, FILE *stream)
+
+如果成功，该函数返回一个 size_t 对象，表示元素的总数，该对象是一个整型数据类型。如果该数字与 nmemb 参数不同，则会显示一个错误。
+
+### fprint()
+int fprintf(FILE *stream, const char *format, ...)
+
+如果成功，则返回写入的字符总数，否则返回一个负数。
+
+### fscanf() 
+int fscanf(FILE *stream, const char *format, ...)
+
+如果成功，该函数返回成功匹配和赋值的个数。如果到达文件末尾或发生读错误，则返回 EOF。
+
+### fgetc()
+int fgetc(FILE *stream)
+
+该函数以无符号 char 强制转换为 int 的形式返回读取的字符，如果到达文件末尾或发生读错误，则返回 EOF。
+
+### fgets()
+char *fgets(char *str, int n, FILE *stream)
+如果成功，该函数返回相同的 str 参数。如果到达文件末尾或者没有读取到任何字符，str 的内容保持不变，并返回一个空指针。
+
+如果发生错误，返回一个空指针。
+
+## fputc()
+
+int fputc(int char, FILE *stream)
+
+如果没有发生错误，则返回被写入的字符。如果发生错误，则返回 EOF，并设置错误标识符。
+
+### fputs()
+
+int fputs(const char *str, FILE *stream)
+
+该函数返回一个非负值，如果发生错误则返回 EOF。
