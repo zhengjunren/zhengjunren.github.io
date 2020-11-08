@@ -823,3 +823,104 @@ public class AddWithoutPlusLcci {
     }
 }
 ```
+
+## 查找常用字符
+给定仅有小写字母组成的字符串数组 A，返回列表中的每个字符串中都显示的全部字符（包括重复字符）组成的列表。例如，如果一个字符在每个字符串中出现 3 次，但不是 4 次，则需要在最终答案中包含该字符 3 次。<br/>
+你可以按任意顺序返回答案。<br/>
+示例 1：<br/>
+输入：["bella","label","roller"]<br/>
+输出：["e","l","l"]<br/>
+示例 2：<br/>
+输入：["cool","lock","cook"]<br/>
+输出：["c","o"]<br/>
+```java
+package leetcode.editor.cn;
+
+import java.util.ArrayList;
+import java.util.List;
+
+@SuppressWarnings("all")
+public class FindCommonCharacters {
+    public static void main(String[] args) {
+        Solution solution = new FindCommonCharacters().new Solution();
+        String[] A = {"bella", "label", "roller"};
+        System.out.println(solution.commonChars(A).toString());
+    }
+    class Solution {
+        public List<String> commonChars(String[] A) {
+            List<String> list = new ArrayList<>();
+            int[] res = new int[26];
+            for (char c : A[0].toCharArray()) {
+                res[c - 'a']++;
+            }
+            for (int i = 1; i < A.length; i++) {
+                int[] temp = new int[26];
+                for (char c : A[i].toCharArray()) {
+                    temp[c - 'a']++;
+                }
+                for (int j = 0; j < 26; j++) {
+                    res[j] = Math.min(res[j], temp[j]);
+                }
+            }
+            for (int i = 0; i < res.length; i++) {
+                if (res[i] > 0) {
+                    for (int j = 0; j < res[i]; j++) {
+                        list.add(((char) ('a' + i) + ""));
+                    }
+                }
+            }
+            return list;
+        }
+    }
+}
+```
+先将第一个字符串的字符数量统计 a-1、b-1、e-2、l-2、o-0、r-0<br/>
+在遍历其他字符串的字符数量统计 a-1、b-1、e-2、l-2、o-0、r-0<br/>
+　　　　　　　　　　　　　　　 a-0、b-0、e-1、l-2、o-1、r-2<br/>
+依次取交集：第一个字符串和第二个字符串与它们的交集相同，第二个和第三个交集为<br/>
+　　　　　　　　　　　　　　　 a-0、b-0、e-1、l-2、o-0、r-0
+
+## 十进制整数的反码
+每个非负整数 N 都有其二进制表示。例如， 5 可以被表示为二进制 "101"，11 可以用二进制 "1011" 表示，依此类推。注意，除 N = 0 外，任何二进制表示中都不含前导零。<br/>
+二进制的反码表示是将每个 1 改为 0 且每个 0 变为 1。例如，二进制数 "101" 的二进制反码为 "010"。
+给你一个十进制数 N，请你返回其二进制表示的反码所对应的十进制整数。<br/>
+示例 1：<br/>
+输入：5<br/>
+输出：2<br/>
+解释：5 的二进制表示为 "101"，其二进制反码为 "010"，也就是十进制中的 2 。<br/>
+示例 2：<br/>
+输入：10<br/>
+输出：5<br/>
+解释：10 的二进制表示为 "1010"，其二进制反码为 "0101"，也就是十进制中的 5 。
+```java
+package leetcode.editor.cn;
+
+@SuppressWarnings("all")
+public class ComplementOfBase10Integer {
+    public static void main(String[] args) {
+        Solution solution = new ComplementOfBase10Integer().new Solution();
+        System.out.println(solution.bitwiseComplement(6));
+    }
+    class Solution {
+        public int bitwiseComplement(int N) {
+//            if (N == 0) {
+//                return 1;
+//            }
+//            int i = 1;
+//            int sum = 0;
+//            while (N != 0) {
+//                int r = (N % 2) ^ 1;
+//                N >>= 1;
+//                sum = sum + i * r;
+//                i *= 2;
+//            }
+//            return sum;
+            int num = 1;
+            while(num < N){
+                num = (num << 1) + 1;
+            }
+            return N ^ num;
+        }
+    }
+}
+```
