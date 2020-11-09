@@ -13,7 +13,7 @@ const childrenData = [
         'exsta', '优先级',
         'common-function',
         'bitwise', 'question',
-        'leet-code', 'error-question-collections'
+        'error-question-collections'
     ],
     ['test/2000', 'test/2007', 'test/2009', 'test/2011'],
     ['case/', 'case/case1', 'case/list1', 'case/list2', 'case/file1', 'case/file2']
