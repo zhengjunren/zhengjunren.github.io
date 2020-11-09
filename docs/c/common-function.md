@@ -126,6 +126,55 @@ int main() {
 }
 ```
 
+
+## strstr()
+### 描述
+C 库函数 char *strstr(const char *haystack, const char *needle) 在字符串 haystack 中查找第一次出现字符串 needle 的位置，不包含终止符 '\0'。
+
+### 声明
+下面是 strstr() 函数的声明。
+
+char *strstr(const char *haystack, const char *needle)
+
+### 参数
++ haystack -- 要被检索的 C 字符串。
++ needle -- 在 haystack 字符串内要搜索的小字符串。
+
+### 返回值
+该函数返回在 haystack 中第一次出现 needle 字符串的位置，如果未找到则返回 null。
+
+
+## strncpy()
+
+### 描述
+C 库函数 char *strncpy(char *dest, const char *src, size_t n) 把 src 所指向的字符串复制到 dest，最多复制 n 个字符。当 src 的长度小于 n 时，dest 的剩余部分将用空字节填充。
+
+### 声明
+下面是 strncpy() 函数的声明。
+
+char *strncpy(char *dest, const char *src, size_t n)
+### 参数
++ dest -- 指向用于存储复制内容的目标数组。
++ src -- 要复制的字符串。
++ n -- 要从源中复制的字符数。
+### 返回值
+该函数返回最终复制的字符串。
+
+## strncat()
+### 描述
+C 库函数 char *strncat(char *dest, const char *src, size_t n) 把 src 所指向的字符串追加到 dest 所指向的字符串的结尾，直到 n 字符长度为止。
+
+### 声明
+下面是 strncat() 函数的声明。
+
+char *strncat(char *dest, const char *src, size_t n)
+### 参数
++ dest -- 指向目标数组，该数组包含了一个 C 字符串，且足够容纳追加后的字符串，包括额外的空字符。
++ src -- 要追加的字符串。
++ n -- 要追加的最大字符数。
+### 返回值
+该函数返回一个指向最终的目标字符串 dest 的指针。
+
 ## 常见函数的返回值
 
 ```c
@@ -192,7 +241,7 @@ char *fgets(char *str, int n, FILE *stream)
 
 如果发生错误，返回一个空指针。
 
-## fputc()
+### fputc()
 
 int fputc(int char, FILE *stream)
 
