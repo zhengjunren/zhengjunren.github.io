@@ -73,3 +73,6 @@ int main() {
     return 0;
 }
 ```
+
+## void 指针
+请看补充

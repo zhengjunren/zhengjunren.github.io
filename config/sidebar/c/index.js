@@ -12,7 +12,8 @@ const childrenData = [
         'switch', 'prisca',
         'exsta', '优先级',
         'common-function',
-        'bitwise', 'question',
+        'bitwise', 'complement',
+        'question',
         'error-question-collections'
     ],
     ['test/2000', 'test/2007', 'test/2009', 'test/2011'],
