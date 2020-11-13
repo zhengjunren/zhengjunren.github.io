@@ -16,7 +16,7 @@ const childrenData = [
         'question',
         'error-question-collections'
     ],
-    ['test/2000', 'test/2007', 'test/2009', 'test/2011'],
+    ['test/2000', 'test/2006', 'test/2007', 'test/2009', 'test/2011'],
     ['case/', 'case/case1', 'case/list1', 'case/list2', 'case/file1', 'case/file2']
 ];
 
