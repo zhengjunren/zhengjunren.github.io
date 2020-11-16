@@ -335,3 +335,48 @@ void sort(char s[], int len) {
 }
 ```
 
+
+## 奇数魔方阵
+1. 将1放在第一行中间一列
+
+2. 从2开始直到n×n止各数依次按下列规则存放：
+    + 每一个数存放的行比前一个数的行数 -1，列数 +1
+
+3. 如果上一个数的行数为1，下一个数的行数应为n，即最后一行 //理解为封闭环形
+
+4. 如果上一个数的列数为n，下一个数的列数应为1，即第一列 //理解为封闭环形
+
+5. 如果按上面规则确定的位置上已有数，则把下一个数放在上一个数的下面
+```c
+#include <stdio.h>
+#define N 3
+int main() {
+    int a[N][N] = {0};
+    a[0][N / 2] = 1;
+    int lastRow = 0, lastCol = N / 2;
+    for (int i = 2; i <= N * N; i++) {
+        int currentRow = lastRow - 1;
+        int currentCol = lastCol + 1;
+        if (currentRow < 0) {
+            currentRow = N - 1;
+        }
+        if (currentCol == N) {
+            currentCol = 0;
+        }
+        if (a[currentRow][currentCol] != 0) {
+            currentRow = lastRow + 1;
+            currentCol = lastCol;
+        }
+        a[currentRow][currentCol] = i;
+        lastRow = currentRow;
+        lastCol = currentCol;
+    }
+    for (int i = 0; i < N; i++) {
+        for (int j = 0; j < N; j++) {
+            printf("%d ", a[i][j]);
+        }
+        putchar('\n');
+    }
+    return 0;
+}
+```
