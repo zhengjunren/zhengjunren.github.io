@@ -13,7 +13,7 @@ const childrenData = [
         'exsta', '优先级',
         'common-function',
         'bitwise', 'complement',
-        'question',
+        'question', 'examples',
         'error-question-collections'
     ],
     [
