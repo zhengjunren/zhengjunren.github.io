@@ -1,4 +1,45 @@
 # 例题
+
+## 第四章
+### 第二道
+```c
+#include <stdio.h>
+
+int main() {
+    int a = 0, b = 4, c = 5;
+    switch (a == 0) {
+    case 1:
+        switch (b < 0) {
+        case 1:
+            printf("@ ");
+            break;
+        case 0:
+            printf("!");
+            break;
+        }
+    case 0:
+        switch (c == 5) {
+        case 0:
+            printf("* ");
+            break;
+        case 1:
+            printf("#");
+            break;
+        default:
+            printf("%");
+        }
+        break;
+    default:
+        printf("&");
+    }
+
+
+    return 0;
+}
+```
+输出：<br/>
+!#
+
 ## 第九章
 ### 第三道
 某财务文件在制作时由于疏忽，把所有的单位错误地写成了美元，请通过程序完成以下功能：将该文件中所有单位为美元的地方换位人民币
