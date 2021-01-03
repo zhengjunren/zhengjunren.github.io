@@ -12,7 +12,7 @@ module.exports = {
     'mathjax': {
         target: 'svg',
         macros: {
-        '*': '\\times',
+            '*': '\\times',
         },
     }
 };
