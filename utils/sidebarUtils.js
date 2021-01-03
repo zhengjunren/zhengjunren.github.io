@@ -21,11 +21,11 @@ function genSidebar(titles, children, collapsable, sidebarDepth) {
 
 // 侧边栏生成通用工具类
 const SidebarUtils = {
-    simpleGenSidebar : function (titles, children) {
+    simpleGenSidebar: function (titles, children) {
         return genSidebar(titles, children, false, 1)
     },
 
-    complexGenSidebar : function (titles, children, collapsable, sidebarDepth) {
+    complexGenSidebar: function (titles, children, collapsable, sidebarDepth) {
         return genSidebar(titles, children, collapsable, sidebarDepth)
     }
 };

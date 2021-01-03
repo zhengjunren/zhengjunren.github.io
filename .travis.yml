@@ -13,7 +13,7 @@ deploy:
   keep-history: true
   target_branch: master
   on:
-    branch: blog-source
+    branch: new-theme
 
 notifications:
   email:

@@ -1,18 +1,23 @@
-
-### nodejs ###
-.idea
+.DS_Store
 node_modules/
-*.sh
-#*.bat
-#*.json
-*.lock
+dist/
+CONTRIBUTING.md
+npm-debug.log
+yarn-debug.log*
+yarn-error.log*
+yarn.lock
 package-lock.json
-### config ###
-#config/
+test/unit/coverage
+test/e2e/reports
+selenium-debug.log
 
-### utils ###
-#utils/
+# Editor directories and files
+.idea
+.vscode
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
 
-### html ###
-docs/.vuepress/dist
-# docs/mybatis-plus/
+# ad
+docs/.vuepress/theme

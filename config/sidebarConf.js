@@ -38,12 +38,4 @@ module.exports = {
     '/docker/': docker,
     '/linux/': linux,
     '/leet-code/': leetcode,
-    '/': [
-        {
-            title: '首页',
-            path: '/',
-            collapsable: false
-        },
-        '/guide/'
-    ]
 };

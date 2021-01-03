@@ -10,7 +10,7 @@ const childrenData = [
     ],
     [
         'switch', 'prisca',
-        'exsta', '优先级',
+        'exsta', 'yxj',
         'common-function',
         'bitwise', 'complement',
         'question', 'examples',
