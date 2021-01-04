@@ -1,4 +1,7 @@
-# printf&scanf
+---
+title: printf&scanf
+date: 2021-01-04
+---
 
 ## printf
 

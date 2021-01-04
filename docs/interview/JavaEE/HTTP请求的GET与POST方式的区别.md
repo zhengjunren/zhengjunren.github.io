@@ -1,4 +1,7 @@
-# HTTP请求的GET与POST方式的区别
+---
+title: HTTP请求的GET与POST方式的区别
+date: 2021-01-04
+---
 
 + 根据 HTTP 规范，GET 用于信息获取，而且应该是安全的和幂等的。
 

@@ -1,4 +1,7 @@
-# 终止容器
+---
+title: 终止容器
+date: 2021-01-04
+---
 
 可以使用 `docker container stop` 来终止一个运行中的容器。
 

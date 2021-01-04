@@ -1,4 +1,7 @@
-# Java四种引用类型
+---
+title: Java四种引用类型
+date: 2021-01-04
+---
 
 ## 声明
 本文转载自<https://www.cnblogs.com/liyutian/p/9690974.html>

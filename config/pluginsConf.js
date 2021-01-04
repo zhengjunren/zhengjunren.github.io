@@ -7,8 +7,10 @@ module.exports = {
         }
     },
     // 回到顶部插件
-    '@vuepress/back-to-top': true,
+    '@vuepress-reco/vuepress-plugin-back-to-top': true,
+
     '@vuepress/medium-zoom': true,
+
     'mathjax': {
         target: 'svg',
         macros: {

@@ -1,4 +1,7 @@
-# extern&static
+---
+title: extern&static
+date: 2021-01-04
+---
 
 ## static关键字
 ```c

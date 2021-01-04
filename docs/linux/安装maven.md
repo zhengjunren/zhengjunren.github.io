@@ -1,4 +1,7 @@
-# Linux 安装 Maven
+---
+title: Linux 安装 Maven
+date: 2021-01-04
+---
 
 ## 概述
 此处以 Maven 3.5.3 为例

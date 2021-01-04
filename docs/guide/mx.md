@@ -1,4 +1,7 @@
-# 特别鸣谢
+---
+title: 特别鸣谢
+date: 2021-01-04
+---
 - 感谢 [JetBrains](https://www.jetbrains.com/) 提供的非商业开源软件开发授权
 
 - 感谢 [七牛云](https://www.qiniu.com/) 提供的免费云存储与CDN加速支持

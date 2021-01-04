@@ -1,4 +1,7 @@
-# VuePress的安装
+---
+title: VuePress的安装
+date: 2021-01-04
+---
 
 ## 环境要求
 ::: warning 注意

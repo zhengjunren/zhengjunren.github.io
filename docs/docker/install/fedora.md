@@ -1,4 +1,7 @@
-# Fedora 安装 Docker
+---
+title: Fedora 安装 Docker
+date: 2021-01-04
+---
 
 >警告：切勿在没有配置 Docker dnf 源的情况下直接使用 dnf 命令安装 Docker.
 

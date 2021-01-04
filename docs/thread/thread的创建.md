@@ -1,4 +1,7 @@
-# 线程创建
+---
+title: 线程创建
+date: 2021-01-04
+---
 
 + 新建名为```hello-thread```的项目，再创建```com.example.hello.thread```包。
 

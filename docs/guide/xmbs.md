@@ -1,4 +1,7 @@
-# 部署项目
+---
+title: 部署项目
+date: 2021-01-04
+---
 本项目可以使用 `tomcat` 或者 `nginx` 部署，在这里分享下常规部署 `[Nginx]` 与使用Docker部署的两种方式
 ## SSH工具推荐
 先分享个好用的 SSH 工具 [FinalShell](http://www.hostbuf.com/t/988.html)，后面部署会使用到 

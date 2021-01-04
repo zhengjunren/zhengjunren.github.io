@@ -1,4 +1,7 @@
-# Linux 配置 DHCP
+---
+title: Linux 配置 DHCP
+date: 2021-01-04
+---
 ## DHCP服务
 
 1. 安装isc-dhcp-server：

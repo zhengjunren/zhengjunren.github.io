@@ -1,4 +1,7 @@
-# Git的奇技淫巧:see_no_evil:
+---
+title: Git的奇技淫巧
+date: 2021-01-04
+---
 > Git常用命令集合，Fork于[tips](https://github.com/git-tips/tips)项目
 
 :::tip 备注

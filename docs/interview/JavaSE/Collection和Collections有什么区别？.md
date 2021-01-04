@@ -1,4 +1,7 @@
-# Collection 和 Collections 有什么区别？
+---
+title: Collection 和 Collections 有什么区别？
+date: 2021-01-04
+---
 
 + java.util.Collection 是一个集合接口。它提供了对集合对象进行基本操作的通用接口方法。Collection接口在Java 类库中有很多具体的实现。Collection接口的意义是为各种具体的集合提供了最大化的统一操作方式。
 

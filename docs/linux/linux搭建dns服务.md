@@ -1,4 +1,7 @@
-# Linux 配置 DNS
+---
+title: Linux 配置 DNS
+date: 2021-01-04
+---
 
 这里我们使用`Bind9`
 

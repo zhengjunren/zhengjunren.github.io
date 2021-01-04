@@ -1,4 +1,7 @@
-## CentOS 安装 Docker
+---
+title:  CentOS 安装 Docker
+date: 2021-01-04
+---
 
 >警告：切勿在没有配置 Docker YUM 源的情况下直接使用 yum 命令安装 Docker.
 

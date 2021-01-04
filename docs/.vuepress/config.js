@@ -7,7 +7,7 @@ module.exports = {
     // 头部
     head: [
         ['meta', { name: 'viewport', content: 'width=device-width,initial-scale=1,user-scalable=no' }],
-        ['link', { rel: 'icon', href: '/logo/small.png' }]
+        ['link', { rel: 'icon', href: '/hero1.jpg' }]
     ],
     // 网站标题及描述
     theme: 'reco',

@@ -1,4 +1,7 @@
-# VuePress的初步使用
+---
+title: VuePress的初步使用
+date: 2021-01-04
+---
 
 ## 环境要求
 ::: warning 注意

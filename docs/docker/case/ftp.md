@@ -1,4 +1,7 @@
-# compose 搭建 ftp 服务器
+---
+title: compose 搭建 ftp 服务器
+date: 2021-01-04
+---
 
 ## vsftpd
 镜像地址：<https://hub.docker.com/r/fauria/vsftpd>
