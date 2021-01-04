@@ -1,4 +1,6 @@
 module.exports = {
+
+    '@vuepress/medium-zoom': true,
     '@vuepress/pwa': {
         serviceWorker: true,
         updatePopup: {
@@ -9,7 +11,6 @@ module.exports = {
     // 回到顶部插件
     '@vuepress-reco/vuepress-plugin-back-to-top': true,
 
-    '@vuepress/medium-zoom': true,
 
     'mathjax': {
         target: 'svg',
