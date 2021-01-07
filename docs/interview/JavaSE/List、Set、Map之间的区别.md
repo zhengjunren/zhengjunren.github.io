@@ -9,6 +9,8 @@ date: 2021-01-04
 `ArrayList` : 长度可变的数组，可以对元素进行随机的访问，向`ArrayList`中插入与删除元素的速度慢。 JDK8 中`ArrayList`扩容的实现是通过`grow()`方法里使用语句`newCapacity = oldCapacity + (oldCapacity >> 1)`（即1.5倍扩容）计算容量，然后调用`Arrays.copyof()`方法进行对原数组进行复制。
 `LinkedList`: 采用链表数据结构，插入和删除速度快，但访问速度慢。
 
+`Vector` 线程安全，效率低
+
 ## Set(集合)
 `Set`中的对象不按特定(HashCode)的方式排序，并且没有重复对象，`Set`主要有以下两个实现类：
 

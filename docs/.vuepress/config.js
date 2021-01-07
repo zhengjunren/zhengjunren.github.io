@@ -21,7 +21,7 @@ module.exports = {
         lastUpdated: '上次更新',
         // logo
         subSidebar: 'auto',
-        logo: '/hero1.jpg',
+        // logo: '/hero1.jpg',
         author: 'ZhengJunren',
         // 备案
         // 项目开始时间，只填写年份

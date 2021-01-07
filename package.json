@@ -6,7 +6,7 @@
   "license": "Apache-2.0",
   "devDependencies": {
     "@vuepress/plugin-back-to-top": "^1.7.1",
-    "@vuepress/plugin-medium-zoom": "^1.7.1",
+    "@vuepress/plugin-medium-zoom": "^1.8.0",
     "@vuepress/plugin-pwa": "^1.7.1",
     "vuepress": "^1.7.1"
   },
@@ -15,7 +15,8 @@
     "docs:build": "vuepress build docs"
   },
   "dependencies": {
+    "vuepress-plugin-mathjax": "^1.2.8",
     "vuepress-theme-reco": "^1.6.1",
-    "vuepress-plugin-mathjax": "^1.2.8"
+    "@vuepress/plugin-medium-zoom": "^1.8.0"
   }
 }

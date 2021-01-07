@@ -17,6 +17,7 @@ const docker = require('./sidebar/docker/index');
 const linux = require('./sidebar/linux/index');
 const resume = require('./sidebar/resume/index');
 const leetcode = require('./sidebar/leet-code/index');
+const java = require('./sidebar/java/index');
 module.exports = {
     '/guide/': guide,
     '/resume/': resume,
@@ -38,4 +39,5 @@ module.exports = {
     '/docker/': docker,
     '/linux/': linux,
     '/leet-code/': leetcode,
+    '/java/': java
 };
