@@ -13,14 +13,14 @@ const childrenData = [
         'JavaSE/Java四种引用类型',
         'JavaSE/Collection和Collections有什么区别？',
         'JavaSE/List、Set、Map之间的区别',
-        'JavaSE/ArrayList 与 LinkedList 区别',
+        'JavaSE/ArrayList与LinkedList区别',
         'JavaSE/HashMap',
         'JavaSE/异常',
         'JavaSE/String、StringBulider、StringBuffer'
     ],
     [
         'JavaEE/HTTP请求的GET与POST方式的区别', 'JavaEE/httpstatus',
-        'JavaEE/SpringAOP'
+        'JavaEE/SpringAop'
     ],
     ['frontend/前端'],
     ['sql/Btree和B+tree的区别'],
