@@ -11,6 +11,7 @@ const childrenData = [
         'JavaSE/类初始化顺序',
         'JavaSE/final、finally和finalize的区别',
         'JavaSE/Java四种引用类型',
+        'JavaSE/collection',
         'JavaSE/Collection和Collections有什么区别？',
         'JavaSE/List、Set、Map之间的区别',
         'JavaSE/ArrayList与LinkedList区别',
@@ -20,10 +21,10 @@ const childrenData = [
     ],
     [
         'JavaEE/HTTP请求的GET与POST方式的区别', 'JavaEE/httpstatus',
-        'JavaEE/SpringAop'
+        'JavaEE/Spring', 'JavaEE/SpringAop', 'JavaEE/Spring整合Mybatis'
     ],
     ['frontend/前端'],
-    ['sql/Btree和B+tree的区别'],
+    ['db/Btree和B+tree的区别', 'db/redis'],
     ['other/零散面试题']
 ];
 
