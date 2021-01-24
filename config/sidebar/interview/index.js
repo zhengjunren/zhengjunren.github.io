@@ -17,14 +17,15 @@ const childrenData = [
         'JavaSE/ArrayList与LinkedList区别',
         'JavaSE/HashMap',
         'JavaSE/异常',
-        'JavaSE/String、StringBulider、StringBuffer'
+        'JavaSE/String、StringBulider、StringBuffer',
+        'JavaSE/thread'
     ],
     [
         'JavaEE/HTTP请求的GET与POST方式的区别', 'JavaEE/httpstatus',
         'JavaEE/Spring', 'JavaEE/SpringAop', 'JavaEE/Spring整合Mybatis'
     ],
     ['frontend/前端'],
-    ['db/Btree和B+tree的区别', 'db/redis'],
+    ['db/Btree和B+tree的区别', 'db/Mysql索引会失效的几种情况', 'db/redis'],
     ['other/零散面试题']
 ];
 
