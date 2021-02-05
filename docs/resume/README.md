@@ -40,6 +40,14 @@ date: 2021-01-04
     - 功能: 在线用户、日志管理、权限管理、文章管理、标签管理、定时任务、存储管理、七牛云文件管理。
     - 项目开发环境：windows10，jdk1.8, redis, mysql, elasticsearch。
     - 项目地址：<https://github.com/zhengjunren/myblog/tree/single>
+    
+- 古诗词管理系统
+
+    + 分为后台管理员、注册用户、游客业务模块，文章、诗词、点赞、评论等功能
+
+    + 技术栈：Spring Boot、Redis、ElasticSearch、MySQL、vue、jwt等
+
+    + 负责后台管理开发，包括用户管理、诗词管理、文章管理、标签管理、点赞评论功能、缓存功能。
 
 ### 技术文章
 - [**VuePress的使用**](/vuepress/)
