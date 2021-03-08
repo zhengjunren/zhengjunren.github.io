@@ -13,6 +13,9 @@ date: 2021-01-04
 
 [**了解一下**](/internet/)
 
+## 软件工程
+
+[**了解一下**](/software_engineering/1)
 ## leetcode
 
 刷题
