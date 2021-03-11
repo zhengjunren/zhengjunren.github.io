@@ -1,7 +1,4 @@
----
-title: Docker 常用命令
-date: 2021-01-04
----
+#  Docker 常用命令
 ## 查看 Docker 版本
 ```sh
 docker version

@@ -1,7 +1,4 @@
----
-title: Ubuntu搭建Postfix邮箱服务器
-date: 2021-01-04
----
+#  Ubuntu搭建Postfix邮箱服务器
 
 ## 安装
 

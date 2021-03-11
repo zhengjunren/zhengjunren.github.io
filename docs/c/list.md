@@ -1,7 +1,4 @@
----
-title: 链表
-date: 2021-01-04
----
+#  链表
 ```c
 #include <stdio.h>
 #include <stdlib.h>

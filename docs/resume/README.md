@@ -1,7 +1,5 @@
-## 个人信息
+# 简历
 
-### 基本信息
- - **郑俊仁**/男/1998/本科
  - 英语：CET-4
  - 学校专业：江西财经大学软件与物联网工程学院软件工程
  - 技术博客：[http://zhengjunren.github.io](http://zhengjunren.github.io/)

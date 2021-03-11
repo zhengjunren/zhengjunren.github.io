@@ -1,7 +1,4 @@
----
-title: final、finally和finalize()的区别
-date: 2021-01-04
----
+#  final、finally和finalize()的区别
 
 ## final
 

@@ -1,7 +1,4 @@
----
-title: HashMap相关问题
-date: 2021-1-13
----
+#  HashMap相关问题
 
 ## HashMap的底层原理是什么？
 基于hashing的原理，jdk8后采用数组+链表+红黑树的数据结构。通过put和get存储和获取对象。当给put()方法传递键和值时，先对键做一个hashCode()的计算来得到它在bucket数组中的位置来存储Entry对象。当获取对象时，通过get获取到bucket的位置，再通过键对象的equals()方法找到正确的键值对，然后在返回值对象。

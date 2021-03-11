@@ -1,7 +1,4 @@
----
-title: 镜像加速器
-date: 2021-01-04
----
+#  镜像加速器
 
 国内从 Docker Hub 拉取镜像有时会遇到困难，此时可以配置镜像加速器。国内很多云服务商都提供了国内加速器服务，例如：
 
@@ -32,7 +29,7 @@ date: 2021-01-04
 
 之后重新启动服务。
 
-```bash
+```shell
 $ sudo systemctl daemon-reload
 $ sudo systemctl restart docker
 ```
@@ -69,7 +66,7 @@ $ sudo systemctl restart docker
 
 执行 `$ docker info`，如果从结果中看到了如下内容，说明配置成功。
 
-```bash
+```shell
 Registry Mirrors:
  https://dockerhub.azk8s.cn/
 ```
@@ -78,7 +75,7 @@ Registry Mirrors:
 
 国内无法直接获取 `gcr.io/*` 镜像，我们可以将 `gcr.io/<repo-name>/<image-name>:<version>` 替换为 `gcr.azk8s.cn/<repo-name>/<image-name>:<version>` ,例如
 
-```bash
+```shell
 # $ docker pull gcr.io/google_containers/hyperkube-amd64:v1.9.2
 
 $ docker pull gcr.azk8s.cn/google_containers/hyperkube-amd64:v1.9.2

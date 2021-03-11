@@ -1,7 +1,4 @@
----
-title: finally和return谁先执行
-date: 2021-01-04
----
+#  finally和return谁先执行
 
 ## try{reurn;}finally{return;}
 ```java

@@ -1,7 +1,4 @@
----
-title: Spring
-date: 2021-01-18
----
+#  Spring
 ## Spring 有几种注入方式
 1. 手动注入
     + set 方法注入

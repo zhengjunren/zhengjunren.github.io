@@ -1,7 +1,4 @@
----
-title: Linux 安装 Java
-date: 2021-01-04
----
+#  Linux 安装 Java
 
 ## 概述
 此处以 JDK 1.8.0_152 为例

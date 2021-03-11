@@ -1,7 +1,4 @@
----
-title: Fedora 安装 Docker
-date: 2021-01-04
----
+#  Fedora 安装 Docker
 
 >警告：切勿在没有配置 Docker dnf 源的情况下直接使用 dnf 命令安装 Docker.
 
@@ -19,7 +16,7 @@ Docker CE 支持以下版本的 [Fedora](https://fedoraproject.org/) 操作系�
 
 旧版本的 Docker 称为 `docker` 或者 `docker-engine`，使用以下命令卸载旧版本：
 
-```bash
+```shell
 $ sudo dnf remove docker \
                   docker-client \
                   docker-client-latest \
@@ -36,7 +33,7 @@ $ sudo dnf remove docker \
 
 执行以下命令安装依赖包：
 
-```bash
+```shell
 $ sudo dnf -y install dnf-plugins-core
 ```
 
@@ -44,7 +41,7 @@ $ sudo dnf -y install dnf-plugins-core
 
 执行下面的命令添加 `dnf` 软件源：
 
-```bash
+```shell
 $ sudo dnf config-manager \
     --add-repo \
     https://mirrors.ustc.edu.cn/docker-ce/linux/fedora/docker-ce.repo
@@ -58,19 +55,19 @@ $ sudo dnf config-manager \
 
 如果需要测试版本的 Docker CE 请使用以下命令：
 
-```bash
+```shell
 $ sudo dnf config-manager --set-enabled docker-ce-test
 ```
 
 如果需要每日构建版本的 Docker CE 请使用以下命令：
 
-```bash
+```shell
 $ sudo dnf config-manager --set-enabled docker-ce-nightly
 ```
 
 你也可以禁用测试版本的 Docker CE
 
-```bash
+```shell
 $ sudo dnf config-manager --set-disabled docker-ce-test
 ```
 
@@ -78,14 +75,14 @@ $ sudo dnf config-manager --set-disabled docker-ce-test
 
 更新 `dnf` 软件源缓存，并安装 `docker-ce`。
 
-```bash
+```shell
 $ sudo dnf update
 $ sudo dnf install docker-ce
 ```
 
 你也可以使用以下命令安装指定版本的 Docker
 
-```bash
+```shell
 $ dnf list docker-ce  --showduplicates | sort -r
 
 docker-ce.x86_64          18.06.1.ce-3.fc28                     docker-ce-stable
@@ -97,7 +94,7 @@ $ sudo dnf -y install docker-ce-18.06.1.ce
 
 在测试或开发环境中 Docker 官方为了简化安装流程，提供了一套便捷的安装脚本，Debian 系统上可以使用这套脚本安装，另外可以通过 `--mirror` 选项使用国内源进行安装：
 
-```bash
+```shell
 $ curl -fsSL get.docker.com -o get-docker.sh
 $ sudo sh get-docker.sh --mirror Aliyun
 # $ sudo sh get-docker.sh --mirror AzureChinaCloud
@@ -107,7 +104,7 @@ $ sudo sh get-docker.sh --mirror Aliyun
 
 ## 启动 Docker CE
 
-```bash
+```shell
 $ sudo systemctl enable docker
 $ sudo systemctl start docker
 ```
@@ -118,13 +115,13 @@ $ sudo systemctl start docker
 
 建立 `docker` 组：
 
-```bash
+```shell
 $ sudo groupadd docker
 ```
 
 将当前用户加入 `docker` 组：
 
-```bash
+```shell
 $ sudo usermod -aG docker $USER
 ```
 
@@ -132,7 +129,7 @@ $ sudo usermod -aG docker $USER
 
 ## 测试 Docker 是否安装正确
 
-```bash
+```shell
 $ docker run hello-world
 
 Unable to find image 'hello-world:latest' locally
@@ -154,7 +151,7 @@ To generate this message, Docker took the following steps:
     to your terminal.
 
 To try something more ambitious, you can run an Ubuntu container with:
- $ docker run -it ubuntu bash
+ $ docker run -it ubuntu shell
 
 Share images, automate workflows, and more with a free Docker ID:
  https://hub.docker.com/

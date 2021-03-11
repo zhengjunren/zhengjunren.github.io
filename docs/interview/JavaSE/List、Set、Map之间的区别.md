@@ -1,7 +1,4 @@
----
-title: List、Set、Map 之间的区别
-date: 2021-01-04
----
+#  List、Set、Map 之间的区别
 
 ## List(列表)
 `List`的元素以线性方式存储，可以存放重复对象，List主要有以下两个实现类：

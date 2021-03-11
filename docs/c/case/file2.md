@@ -1,7 +1,4 @@
----
-title: 文件操作2
-date: 2021-01-04
----
+#  文件操作2
 ```c
 #include <stdio.h>
 #include <stdlib.h>

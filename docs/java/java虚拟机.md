@@ -1,7 +1,4 @@
----
-title: Java 虚拟机
-date: 2021-1-8
----
+#  Java 虚拟机
 
 ## Java内存模型
 

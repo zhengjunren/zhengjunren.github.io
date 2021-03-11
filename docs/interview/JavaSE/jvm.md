@@ -1,7 +1,4 @@
----
-title: JVM 
-date: 2021-01-24
----
+#  JVM 
 
 1. 谈谈 JVM 的理解
 2. 什么是 OOM,StackOverFlowError

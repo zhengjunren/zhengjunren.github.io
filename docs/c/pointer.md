@@ -1,7 +1,4 @@
----
-title: 指针
-date: 2021-01-04
----
+#  指针
 ```c
 #include <stdio.h>
 

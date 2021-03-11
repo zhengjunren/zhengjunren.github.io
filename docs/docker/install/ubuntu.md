@@ -1,7 +1,4 @@
----
-title: ubuntu 安装 Docker
-date: 2021-01-04
----
+#  ubuntu 安装 Docker
 
 >警告：切勿在没有配置 Docker APT 源的情况下直接使用 apt 命令安装 Docker.
 
@@ -22,7 +19,7 @@ Docker CE 可以安装在 64 位的 x86 平台或 ARM 平台上。Ubuntu 发行�
 
 旧版本的 Docker 称为 `docker` 或者 `docker-engine`，使用以下命令卸载旧版本：
 
-```bash
+```shell
 $ sudo apt-get remove docker \
                docker-engine \
                docker.io
@@ -32,7 +29,7 @@ $ sudo apt-get remove docker \
 
 由于 `apt` 源使用 HTTPS 以确保软件下载过程中不被篡改。因此，我们首先需要添加使用 HTTPS 传输的软件包以及 CA 证书。
 
-```bash
+```shell
 $ sudo apt-get update
 
 $ sudo apt-get install \
@@ -46,7 +43,7 @@ $ sudo apt-get install \
 
 为了确认所下载软件包的合法性，需要添加软件源的 `GPG` 密钥。
 
-```bash
+```shell
 $ curl -fsSL https://mirrors.ustc.edu.cn/docker-ce/linux/ubuntu/gpg | sudo apt-key add -
 
 
@@ -56,7 +53,7 @@ $ curl -fsSL https://mirrors.ustc.edu.cn/docker-ce/linux/ubuntu/gpg | sudo apt-k
 
 然后，我们需要向 `source.list` 中添加 Docker 软件源
 
-```bash
+```shell
 $ sudo add-apt-repository \
     "deb [arch=amd64] https://mirrors.ustc.edu.cn/docker-ce/linux/ubuntu \
     $(lsb_release -cs) \
@@ -76,7 +73,7 @@ $ sudo add-apt-repository \
 
 更新 apt 软件包缓存，并安装 `docker-ce`：
 
-```bash
+```shell
 $ sudo apt-get update
 
 $ sudo apt-get install docker-ce
@@ -86,7 +83,7 @@ $ sudo apt-get install docker-ce
 
 在测试或开发环境中 Docker 官方为了简化安装流程，提供了一套便捷的安装脚本，Ubuntu 系统上可以使用这套脚本安装，另外可以通过 `--mirror` 选项使用国内源进行安装：
 
-```bash
+```shell
 $ curl -fsSL get.docker.com -o get-docker.sh
 $ sudo sh get-docker.sh --mirror Aliyun
 # $ sudo sh get-docker.sh --mirror AzureChinaCloud
@@ -96,7 +93,7 @@ $ sudo sh get-docker.sh --mirror Aliyun
 
 ## 启动 Docker CE
 
-```bash
+```shell
 $ sudo systemctl enable docker
 $ sudo systemctl start docker
 ```
@@ -107,13 +104,13 @@ $ sudo systemctl start docker
 
 建立 `docker` 组：
 
-```bash
+```shell
 $ sudo groupadd docker
 ```
 
 将当前用户加入 `docker` 组：
 
-```bash
+```shell
 $ sudo usermod -aG docker $USER
 ```
 
@@ -121,7 +118,7 @@ $ sudo usermod -aG docker $USER
 
 ## 测试 Docker 是否安装正确
 
-```bash
+```shell
 $ docker run hello-world
 
 Unable to find image 'hello-world:latest' locally
@@ -143,7 +140,7 @@ To generate this message, Docker took the following steps:
     to your terminal.
 
 To try something more ambitious, you can run an Ubuntu container with:
- $ docker run -it ubuntu bash
+ $ docker run -it ubuntu shell
 
 Share images, automate workflows, and more with a free Docker ID:
  https://hub.docker.com/

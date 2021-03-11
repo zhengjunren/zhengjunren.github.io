@@ -1,7 +1,4 @@
----
-title: pom.xml
-date: 2021-01-04
----
+#  pom.xml
 
 ## 什么是pom
 

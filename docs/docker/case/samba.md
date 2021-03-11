@@ -1,7 +1,4 @@
----
-title: compose 搭建 samba 服务器
-date: 2021-01-04
----
+#  compose 搭建 samba 服务器
 
 镜像地址：<https://hub.docker.com/r/dperson/samba>
 + 注意修改`command`属性

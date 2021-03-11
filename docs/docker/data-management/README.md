@@ -1,7 +1,4 @@
----
-title: Docker 数据管理
-date: 2021-01-04
----
+#  Docker 数据管理
 
 ![](/docker/types-of-mounts.png)
 

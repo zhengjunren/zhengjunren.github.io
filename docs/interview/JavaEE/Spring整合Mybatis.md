@@ -1,7 +1,4 @@
----
-title: Spring整合Mybatis
-date: 2021-01-17
----
+#  Spring整合Mybatis
 
 ## Mybatis的基本工作原理
 在Mybatis中，我们可以使用一个接口去定义要执行sql，简化代码如下：

@@ -1,7 +1,4 @@
----
-title: compose 搭建 apache 服务器
-date: 2021-01-04
----
+#  compose 搭建 apache 服务器
 
 镜像地址：<https://hub.docker.com/_/httpd>
 

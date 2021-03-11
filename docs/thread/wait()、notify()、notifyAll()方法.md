@@ -1,7 +1,4 @@
----
-title: wait()、notify()、notifyAll()方法
-date: 2021-01-04
----
+#  wait()、notify()、notifyAll()方法
 
 在Java的```Object```类中有三个```final```的方法允许线程之间进行资源对象锁的通信，他们分别是： ```wait()```, ```notify()``` and ```notifyAll()```。
 

@@ -1,7 +1,4 @@
----
-title: java.lang.StackOverflowError
-date: 2021-01-04
----
+#  java.lang.StackOverflowError
 
 ## 介绍
 

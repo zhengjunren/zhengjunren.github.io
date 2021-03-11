@@ -1,7 +1,4 @@
----
-title: macOS 安装 Docker
-date: 2021-01-04
----
+#  macOS 安装 Docker
 
 ## 系统要求
 
@@ -13,7 +10,7 @@ date: 2021-01-04
 
 [Homebrew](https://brew.sh/) 的 [Cask](https://caskroom.github.io/) 已经支持 Docker Desktop for Mac，因此可以很方便的使用 Homebrew Cask 来进行安装：
 
-```bash
+```shell
 $ brew cask install docker
 ```
 
@@ -45,7 +42,7 @@ $ brew cask install docker
 
 启动终端后，通过命令可以检查安装后的 Docker 版本。
 
-```bash
+```shell
 $ docker --version
 Docker version 19.03.1, build 74b1e89
 $ docker-compose --version
@@ -56,7 +53,7 @@ docker-machine version 0.16.1, build cce350d7
 
 如果 `docker version`、`docker info` 都正常的话，可以尝试运行一个 [Nginx 服务器](https://hub.docker.com/_/nginx/)：
 
-```bash
+```shell
 $ docker run -d -p 80:80 --name webserver nginx
 ```
 
@@ -66,7 +63,7 @@ $ docker run -d -p 80:80 --name webserver nginx
 
 要停止 Nginx 服务器并删除执行下面的命令：
 
-```bash
+```shell
 $ docker stop webserver
 $ docker rm webserver
 ```

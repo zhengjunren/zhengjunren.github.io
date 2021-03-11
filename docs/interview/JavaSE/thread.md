@@ -1,7 +1,4 @@
----
-title: JUC
-date: 2021-01-22
----
+#  JUC
 
 ## 线程与进程
 进程：一个程序，QQ.exe Music.exe 程序的集合；

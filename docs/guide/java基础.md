@@ -1,7 +1,4 @@
----
-title: Java基础
-date: 2021-01-04
----
+#  Java基础
 
 ## Java 介绍
 

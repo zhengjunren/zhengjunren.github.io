@@ -1,7 +1,4 @@
----
-title: VuePress部署
-date: 2021-01-04
----
+#  VuePress部署
 
 ## 部署GithubPages
 

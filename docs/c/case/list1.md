@@ -1,7 +1,4 @@
----
-title:  使用链表1
-date: 2021-01-04
----
+#   使用链表1
 ```c
 #include <stdio.h>
 #include <stdlib.h>

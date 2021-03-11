@@ -1,7 +1,4 @@
----
-title: redis
-date: 2021-01-20
----
+#  redis
 ## Redis有哪些数据结构
 String、Hash、List、Set、SortedSet
 

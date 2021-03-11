@@ -1,7 +1,4 @@
----
-title: 安装与卸载
-date: 2021-01-04
----
+#  安装与卸载
 
 `Compose` 支持 Linux、macOS、Windows 10 三大平台。
 

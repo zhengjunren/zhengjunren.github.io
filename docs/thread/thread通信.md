@@ -1,7 +1,4 @@
----
-title: 线程通信
-date: 2021-01-04
----
+#  线程通信
 
 :::tip 备注
 从这篇[博客](https://github.com/yangchong211/YCBlogs)转载

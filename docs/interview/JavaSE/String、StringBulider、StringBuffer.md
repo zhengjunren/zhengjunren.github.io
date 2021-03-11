@@ -1,7 +1,4 @@
----
-title: String、StringBulider、StringBuffer
-date: 2021-01-07
----
+#  String、StringBulider、StringBuffer
 
 ## String
 

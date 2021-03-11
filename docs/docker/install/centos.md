@@ -1,7 +1,4 @@
----
-title:  CentOS 安装 Docker
-date: 2021-01-04
----
+#   CentOS 安装 Docker
 
 >警告：切勿在没有配置 Docker YUM 源的情况下直接使用 yum 命令安装 Docker.
 
@@ -15,7 +12,7 @@ Docker CE 支持 64 位版本 CentOS 7，并且要求内核版本不低于 3.10�
 
 旧版本的 Docker 称为 `docker` 或者 `docker-engine`，使用以下命令卸载旧版本：
 
-```bash
+```shell
 $ sudo yum remove docker \
                   docker-client \
                   docker-client-latest \
@@ -32,7 +29,7 @@ $ sudo yum remove docker \
 
 执行以下命令安装依赖包：
 
-```bash
+```shell
 $ sudo yum install -y yum-utils \
            device-mapper-persistent-data \
            lvm2
@@ -42,7 +39,7 @@ $ sudo yum install -y yum-utils \
 
 执行下面的命令添加 `yum` 软件源：
 
-```bash
+```shell
 $ sudo yum-config-manager \
     --add-repo \
     https://mirrors.ustc.edu.cn/docker-ce/linux/centos/docker-ce.repo
@@ -56,13 +53,13 @@ $ sudo yum-config-manager \
 
 如果需要测试版本的 Docker CE 请使用以下命令：
 
-```bash
+```shell
 $ sudo yum-config-manager --enable docker-ce-test
 ```
 
 如果需要每日构建版本的 Docker CE 请使用以下命令：
 
-```bash
+```shell
 $ sudo yum-config-manager --enable docker-ce-nightly
 ```
 
@@ -70,7 +67,7 @@ $ sudo yum-config-manager --enable docker-ce-nightly
 
 更新 `yum` 软件源缓存，并安装 `docker-ce`。
 
-```bash
+```shell
 $ sudo yum makecache fast
 $ sudo yum install docker-ce
 ```
@@ -79,7 +76,7 @@ $ sudo yum install docker-ce
 
 在测试或开发环境中 Docker 官方为了简化安装流程，提供了一套便捷的安装脚本，CentOS 系统上可以使用这套脚本安装，另外可以通过 `--mirror` 选项使用国内源进行安装：
 
-```bash
+```shell
 $ curl -fsSL get.docker.com -o get-docker.sh
 $ sudo sh get-docker.sh --mirror Aliyun
 # $ sudo sh get-docker.sh --mirror AzureChinaCloud
@@ -89,7 +86,7 @@ $ sudo sh get-docker.sh --mirror Aliyun
 
 ### 启动 Docker CE
 
-```bash
+```shell
 $ sudo systemctl enable docker
 $ sudo systemctl start docker
 ```
@@ -100,13 +97,13 @@ $ sudo systemctl start docker
 
 建立 `docker` 组：
 
-```bash
+```shell
 $ sudo groupadd docker
 ```
 
 将当前用户加入 `docker` 组：
 
-```bash
+```shell
 $ sudo usermod -aG docker $USER
 ```
 
@@ -114,7 +111,7 @@ $ sudo usermod -aG docker $USER
 
 ### 测试 Docker 是否安装正确
 
-```bash
+```shell
 $ docker run hello-world
 
 Unable to find image 'hello-world:latest' locally
@@ -136,7 +133,7 @@ To generate this message, Docker took the following steps:
     to your terminal.
 
 To try something more ambitious, you can run an Ubuntu container with:
- $ docker run -it ubuntu bash
+ $ docker run -it ubuntu shell
 
 Share images, automate workflows, and more with a free Docker ID:
  https://hub.docker.com/
@@ -155,14 +152,14 @@ For more examples and ideas, visit:
 
 如果在 CentOS 使用 Docker CE 看到下面的这些警告信息：
 
-```bash
+```shell
 WARNING: bridge-nf-call-iptables is disabled
 WARNING: bridge-nf-call-ip6tables is disabled
 ```
 
 请添加内核配置参数以启用这些功能。
 
-```bash
+```shell
 $ sudo tee -a /etc/sysctl.conf <<-EOF
 net.bridge.bridge-nf-call-ip6tables = 1
 net.bridge.bridge-nf-call-iptables = 1
@@ -171,7 +168,7 @@ EOF
 
 然后重新加载 `sysctl.conf` 即可
 
-```bash
+```shell
 $ sudo sysctl -p
 ```
 

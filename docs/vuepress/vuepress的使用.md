@@ -1,7 +1,4 @@
----
-title:  VuePress的使用
-date: 2021-01-04
----
+#   VuePress的使用
 
 ::: tip 备注
 个人使用习惯，参照官网的[默认主题配置](https://v1.vuepress.vuejs.org/zh/theme/default-theme-config.html)。

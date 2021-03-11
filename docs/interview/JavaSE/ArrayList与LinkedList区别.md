@@ -1,7 +1,4 @@
----
-title: ArrayList 与 LinkedList 区别
-date: 2021-01-04
----
+#  ArrayList 与 LinkedList 区别
 
 + 因为 Array 是基于索引(index)的数据结构，它使用索引在数组中搜索和读取数据是很快的。Array 获取数据的时间复杂度是 O(1),但是要删除数据却是开销很大的，因为这需要重排数组中的所有数据。
 

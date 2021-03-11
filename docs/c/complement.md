@@ -1,7 +1,4 @@
----
-title: 补充
-date: 2021-01-04
----
+#  补充
 ## 带参数的main函数
 创建`test.c`源文件<br/>
 在 cmd 控制台中输入 `test.exe I love China`<br/>
