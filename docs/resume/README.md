@@ -1,9 +1,10 @@
 # 简历
 
- - 英语：CET-4
- - 学校专业：江西财经大学软件与物联网工程学院软件工程
- - 技术博客：[http://zhengjunren.github.io](http://zhengjunren.github.io/)
- - 手机：15070517468
+## 基本信息
+- 英语：CET-4
+- 学校专业：江西财经大学软件与物联网工程学院软件工程
+- 技术博客：[http://zhengjunren.github.io](http://zhengjunren.github.io/)
+- 手机：15070517468
 
 
 ## 个人经历

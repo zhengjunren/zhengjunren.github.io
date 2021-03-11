@@ -41,7 +41,7 @@ vi /etc/named.conf
 ```
 ![配置bind](/linux/bind2.PNG "配置bind")
 修改为：（注意：只用改这三处，其他别改）
-```conf
+```
 listen-on port 53 { any; };
         listen-on-v6 port 53 { any; };
 /*
