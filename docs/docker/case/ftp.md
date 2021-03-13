@@ -32,7 +32,7 @@ services:
 
 + `vsftpd.conf`:
 + **注意修改`pasv_address`属性**
-```conf{50,58}
+```{50,58}
 # Run in the foreground to keep the container running:
 background=NO
 
